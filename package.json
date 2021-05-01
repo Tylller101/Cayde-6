@@ -1,0 +1,22 @@
+{
+  "name": "cayde-6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Cayde-6.js",
+  "scripts": {
+    "start": "node Cayde-6.js",
+    "dev": "nodemon Cayde-6.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "dotenv": "^8.2.0",
+    "jsonfile": "^6.1.0",
+    "random": "^3.0.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
