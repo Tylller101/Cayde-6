@@ -1,36 +1,44 @@
 module.exports = {
-    name: "addroles",
+    name: "addclasses",
     description: "sets up reaction role message for classes",
-    async execute(message, args, Discord, client){
-        const channel = "836103332757504010"; //836103332757504010
-        const yellow = message.guild.roles.cache.find(role => role.name === "yellow team");
-        const blue = message.guild.roles.cache.find(role => role.name === "blue team");
+    async execute(msg, Discord, cayde){
+        const channel = msg.guild.channels.cache.find(channel => channel.name === "choose-classes");
+        const cse015 = msg.guild.roles.cache.find(role => role.name === "yellow team");
+        const cse022 = msg.guild.roles.cache.find(role => role.name === "blue team");
+        const cse024
+        const 
 
         const yellowEmoji = "🍋";
         const blueEmoji = "🫐";
 
         let embed = new Discord.MessageEmbed()
         .setColor("#000000")
-        .setTitle("choose a team to play on")
-        .setDescription("choosing a team will allow you to interact with your teammates\n\n"
-            + `${yellowEmoji} for yellow team\n`
-            + `${blueEmoji} for blue team`);
-        
-        let messageEmbed = await message.channel.send(embed);
-        messageEmbed.react(yellowEmoji);
-        messageEmbed.react(blueEmoji);
+        .setTitle("Choose your classes")
+        .setDescription("Choose classes you are taking, have taken, or plan on taking "
+        + "and would like to view and interact with on the server.\n\n"
 
-        client.on("messageReactionAdd", async (reaction, user) =>{
+        + "**Required Math classes:\n**"
+            + `${yellowEmoji} for yellow team\n`
+            + `${blueEmoji} for blue team\n`
+
+            + "**Required Physics classes**\n"
+            
+            + "**Required Engineering classes\n**"
+            
+            + "**R");
+        
+        let msgEmbed = await msg.channel.send(embed);
+        msgEmbed.react(yellowEmoji);
+        msgEmbed.react(blueEmoji);
+
+        cayde.on("messageReactionAdd", async (reaction, user) =>{
             if(reaction.message.partial){
                 await reaction.message.fetch();
             }
             if(reaction.partial){
                 await reaction.fetch();
             }
-            if(user.bot){
-                return;
-            }
-            if(!reaction.message.guild){
+            if(user.bot || !reaction.message.guild){
                 return;
             }
             if(reaction.message.channel.id == channel){
@@ -46,17 +54,14 @@ module.exports = {
             }
         });
 
-        client.on("messageReactionRemove", async (reaction, user) =>{
+        cayde.on("messageReactionRemove", async (reaction, user) =>{
             if(reaction.message.partial){
-                await reaction.message.fetch();
+                await reaction.msg.fetch();
             }
             if(reaction.partial){
                 await reaction.fetch();
             }
-            if(user.bot){
-                return;
-            }
-            if(!reaction.message.guild){
+            if(user.bot || !reaction.message.guild){
                 return;
             }
             if(reaction.message.channel.id == channel){
