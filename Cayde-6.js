@@ -38,7 +38,7 @@ cayde.on("message", msg =>{
     const BotCommand = args.shift().toLowerCase();
 
     if(BotCommand === "addclasses"){
-        cayde.BotFeatures.get("addclasses").execute(msg, Discord, cayde);
+        cayde.BotFeatures.get("addclasses").execute(msg, fs, Discord, cayde);
     }
 });
 
