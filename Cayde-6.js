@@ -23,10 +23,11 @@ cayde.on("ready", () =>{ //cayde is online
   });
 
 cayde.on("guildMemberAdd", newMember =>{ //when a person enters the server
-    let welcome = newMember.guild.roles.cache.find(role => role.name === "peon"); //newest members
-
+    let welcome = newMember.guild.roles.cache.find(role => role.name === "Peon"); //newest members
+    let welcomeChannel = newMember.guild.channels.cache.find(channel => channel.name === "welcome");
+    
     newMember.roles.add(welcome); //assign first role
-    newMember.guild.channels.cache.get("814303986491588661").send(`welcome <@${newMember.user.id}> to the server`); //welcome message
+    welcomeChannel.send(`welcome <@${newMember.user.id}> to the server`); //welcome message
 
 });
 
@@ -38,7 +39,10 @@ cayde.on("message", msg =>{
     const BotCommand = args.shift().toLowerCase();
 
     if(BotCommand === "addclasses"){
-        cayde.BotFeatures.get("addclasses").execute(msg, fs, Discord, cayde);
+        cayde.BotFeatures.get("addclasses").execute(msg, Discord, cayde);
+    }
+    if(BotCommand === "addgaming"){
+        cayde.BotFeatures.get("addgaming").execute(msg, Discord, cayde)
     }
 });
 
