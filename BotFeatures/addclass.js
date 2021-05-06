@@ -28,6 +28,7 @@ module.exports = {
         const cse140 = msg.guild.roles.cache.find(role => role.name === "CSE140");
         const cse150 = msg.guild.roles.cache.find(role => role.name === "CSE150");
         const cse160 = msg.guild.roles.cache.find(role => role.name === "CSE160");
+        const cse162 = msg.guild.roles.cache.find(role => role.name === "CSE162");
         const cse165 = msg.guild.roles.cache.find(role => role.name === "CSE165");
         const cse175 = msg.guild.roles.cache.find(role => role.name === "CSE175");
         const cse178 = msg.guild.roles.cache.find(role => role.name === "CSE178");
@@ -57,6 +58,7 @@ module.exports = {
         const cse140Emoji = "🖥️";
         const cse150Emoji = "🪟";
         const cse160Emoji = "🖱️";
+        const cse162Emoji = "📱";
         const cse165Emoji = "💯";
         const cse175Emoji = "📜";
         const cse178Emoji = "👮";
@@ -104,6 +106,7 @@ module.exports = {
             + `${cse140Emoji} for CSE140: Computer Architecture\n`
             + `${cse150Emoji} for CSE150: Operating Systems\n`
             + `${cse160Emoji} for CSE160: Computer Networks\n`
+            + `${cse162Emoji} for CSE162: Mobile Computing\n`
             + `${cse165Emoji} for CSE165: Introduction to Object Oriented Programming\n`
             + `${cse175Emoji} for CSE175: Introduction to Artificial Intelligence\n`
             + `${cse178Emoji} for CSE178: Computers & Networks Security\n`

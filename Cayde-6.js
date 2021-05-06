@@ -17,6 +17,10 @@ for(const file of featureFiles){
     cayde.BotFeatures.set(BotFeat.name,BotFeat)
 }
 
+var userstats = {}; //make empty list for 
+if(fs.existsSync("userstats.json")){
+    userstats = jsonfile.readFileSync("userstats.json");
+}
 
 cayde.on("ready", () =>{ //cayde is online
     console.log("Reporting for Duty");
@@ -31,17 +35,20 @@ cayde.on("guildMemberAdd", newMember =>{ //when a person enters the server
 
 });
 
-cayde.on("message", msg =>{
-    if(!msg.content.startsWith(prefix) || msg.author.bot){
+cayde.on("message", msg =>{ //detects command messages 
+    if(msg.author.bot){
+    cayde.BotFeatures.get("leveler").execute(msg, userstats, Discord, cayde);
+    }
+    if(!msg.content.startsWith(prefix)){
         return;
     }
     const args = msg.content.slice(prefix.length).split(/ +/);
     const BotCommand = args.shift().toLowerCase();
 
-    if(BotCommand === "addclasses"){
+    if(BotCommand === "addclasses"){ //adds classes embed
         cayde.BotFeatures.get("addclasses").execute(msg, Discord, cayde);
     }
-    if(BotCommand === "addgaming"){
+    if(BotCommand === "addgaming"){ //adds gaming embed
         cayde.BotFeatures.get("addgaming").execute(msg, Discord, cayde)
     }
 });
