@@ -2,7 +2,7 @@ module.exports = {
     name: "addclasses",
     description: "sets up reaction role message for classes",
     async execute(msg, Discord, cayde){
-        const channel = msg.guild.channels.cache.find(channel => channel.name === "choose-classes");
+        const classes = msg.guild.channels.cache.find(channel => channel.name === "choose-classes");
 
         const math021 = msg.guild.roles.cache.find(role => role.name === "MATH021");
         const math022 = msg.guild.roles.cache.find(role => role.name === "MATH022");
@@ -112,7 +112,7 @@ module.exports = {
             + `${cse178Emoji} for CSE178: Computers & Networks Security\n`
             + `${cse185Emoji} for CSE185: Introduction to Computer Vision`);
 
-        let msgEmbed = await msg.channel.send(embed);
+        let msgEmbed = await classes.send(embed);
         msgEmbed.react(math021Emoji);
         msgEmbed.react(math022Emoji);
         msgEmbed.react(math023Emoji);
@@ -125,7 +125,7 @@ module.exports = {
         msgEmbed.react(engr065Emoji);
         msgEmbed.react(engr191Emoji);
 
-        let msgEmbed2 = await msg.channel.send(embed2);
+        let msgEmbed2 = await classes.send(embed2);
         msgEmbed2.react(cse015Emoji);
         msgEmbed2.react(cse022Emoji);
         msgEmbed2.react(cse024Emoji);
@@ -138,6 +138,7 @@ module.exports = {
         msgEmbed2.react(cse140Emoji);
         msgEmbed2.react(cse150Emoji);
         msgEmbed2.react(cse160Emoji);
+        msgEmbed2.react(cse162Emoji);
         msgEmbed2.react(cse165Emoji);
         msgEmbed2.react(cse175Emoji);
         msgEmbed2.react(cse178Emoji);
