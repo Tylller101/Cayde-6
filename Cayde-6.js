@@ -10,11 +10,18 @@ const featureFiles = fs.readdirSync("./BotFeatures/").filter(file => file.endsWi
 const games = fs.readdirSync("./BotGames/").filter(file => file.endsWith(".js"));
 
 cayde.BotFeatures = new Discord.Collection();
+cayde.BotGames = new Discord.Collection();
 
 for(const file of featureFiles){
     const BotFeat = require(`./BotFeatures/${file}`);
 
     cayde.BotFeatures.set(BotFeat.name, BotFeat);
+}
+
+for(const file of games){
+    const BotGame = require(`./BotGames/${file}`);
+
+    cayde.BotGames.set(BotGame.name, BotGame);
 }
 
 cayde.on("ready", () =>{ //cayde is online
@@ -26,24 +33,30 @@ cayde.on("guildMemberAdd", newMember =>{ //when a person enters the server
     let welcomeChannel = newMember.guild.channels.cache.find(channel => channel.name === "welcome");
     
     newMember.roles.add(welcome); //assign first role
-    welcomeChannel.send(`welcome <@${newMember.user.id}> to the server`); //welcome message
+    welcomeChannel.send(`welcome <@${newMember.user.id}> to CSE & Gaming`); //welcome message
 
 });
 
 cayde.on("message", msg =>{ //detects command messages 
+    if(msg.channel.type === "dm" && !msg.author.bot){
+        cayde.BotFeatures.get("dming").execute(msg, random);
+        return;
+    }
     if(!msg.content.startsWith(prefix) && !msg.author.bot){
         cayde.BotFeatures.get("leveler").execute(msg, fs, random, jsonfile);
         return;
     }
-    const args = msg.content.slice(prefix.length).split(/ +/);
-    const BotCommand = args.shift().toLowerCase();
+    if(msg.content.startsWith(prefix)){
+        const args = msg.content.slice(prefix.length).split(/ +/);
+        const BotCommand = args.shift().toLowerCase();
 
-    if(BotCommand === "addclasses"){ //adds classes embed
-        cayde.BotFeatures.get("addclasses").execute(msg, Discord, cayde);
-    }
-    if(BotCommand === "addgaming"){ //adds gaming embed
-        cayde.BotFeatures.get("addgaming").execute(msg, Discord, cayde)
+        if(BotCommand === "addclasses"){ //adds classes embed
+            cayde.BotFeatures.get("addclasses").execute(msg, Discord, cayde);
+        }
+        if(BotCommand === "addgaming"){ //adds gaming embed
+            cayde.BotFeatures.get("addgaming").execute(msg, Discord, cayde)
+        }
     }
 });
 
-cayde.login(process.env.CAYDE_TOKEN); //cayds token access
+cayde.login(process.env.CAYDE_TOKEN); //caydes token access
