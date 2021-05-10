@@ -8,6 +8,7 @@ const jsonfile = require("jsonfile"); //use jsonfiles
 const prefix = "!$#"; //my prefix
 const featureFiles = fs.readdirSync("./BotFeatures/").filter(file => file.endsWith(".js"));
 const games = fs.readdirSync("./BotGames/").filter(file => file.endsWith(".js"));
+const serverid = "837067148123177001"; //tylller101s server id right now
 
 cayde.BotFeatures = new Discord.Collection();
 cayde.BotGames = new Discord.Collection();
@@ -39,7 +40,7 @@ cayde.on("guildMemberAdd", newMember =>{ //when a person enters the server
 
 cayde.on("message", msg =>{ //detects command messages 
     if(msg.channel.type === "dm" && !msg.author.bot){
-        cayde.BotFeatures.get("dming").execute(msg, random);
+        cayde.BotFeatures.get("dming").execute(msg, serverid, fs, random, jsonfile, cayde.BotFeatures);
         return;
     }
     if(!msg.content.startsWith(prefix) && !msg.author.bot){

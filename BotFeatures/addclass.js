@@ -220,6 +220,9 @@ module.exports = {
                 if(reaction.emoji.name === cse160Emoji){
                     classAdd.add(cse160);
                 }
+                if(reaction.emoji.name === cse162Emoji){
+                    classAdd.add(cse162);
+                }
                 if(reaction.emoji.name === cse165Emoji){
                     classAdd.add(cse165);
                 }
@@ -311,6 +314,9 @@ module.exports = {
                 }
                 if(reaction.emoji.name === cse160Emoji){
                     classAdd.remove(cse160);
+                }
+                if(reaction.emoji.name === cse162Emoji){
+                    classAdd.remove(cse162);
                 }
                 if(reaction.emoji.name === cse165Emoji){
                     classAdd.remove(cse165);

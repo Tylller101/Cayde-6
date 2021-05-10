@@ -1,7 +1,7 @@
 module.exports = {
     name: "dming", 
     description: "actions when dming the bot including games",
-    async execute(msg, random){
+    async execute(msg, fs, guild, random, jsonfile, caydeBotFeatures){
         const greeting = msg.content.toLowerCase();
         const reply = msg.author;
 
@@ -40,7 +40,8 @@ module.exports = {
                 return;
             }
             if(greeting === "stats"){
-
+                caydeBotFeatures.get("getstats").execute(msg, guild, fs, random, jsonfile, caydeBotFeatures);
+                return;
             }
             if(greeting === "help"){
                 reply.send("If you want to know what I contribute to the server just type \"server\"\n" 
