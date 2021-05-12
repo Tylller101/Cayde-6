@@ -1,11 +1,11 @@
 module.exports = {
     name: "getstats", 
     description: "actions when dming the bot including games",
-    async execute(msg, fs, guild, random, jsonfile, caydeBotFeatures){
+    async execute(msg, fs, guild, jsonfile){
 
         var stats = {}; //make empty list for 
-        if(fs.existsSync("./BotStorage/stats.json")){
-            stats = jsonfile.readFileSync("./BotStorage/stats.json");
+        if(fs.existsSync("./BotStorage/Server/stats.json")){
+            stats = jsonfile.readFileSync("./BotStorage/Server/stats.json");
         }
         else{
             msg.author.send("Sorry I can not find my stats file. I may be under maintenance sorry for the inconvenience.");

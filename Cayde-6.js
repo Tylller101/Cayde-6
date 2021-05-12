@@ -32,15 +32,33 @@ cayde.on("ready", () =>{ //cayde is online
 cayde.on("guildMemberAdd", newMember =>{ //when a person enters the server
     let welcome = newMember.guild.roles.cache.find(role => role.name === "Peon"); //newest members
     let welcomeChannel = newMember.guild.channels.cache.find(channel => channel.name === "welcome");
-    
-    newMember.roles.add(welcome); //assign first role
-    welcomeChannel.send(`welcome <@${newMember.user.id}> to CSE & Gaming`); //welcome message
+    let rulesChannel = newMember.guild.channels.cache.find(channel => channel.name === "rules-and-regs");
+    let tocChannel = newMember.guild.channels.cache.find(channel => channel.name === "server-contents");
+    let discordChannel = newMember.guild.channels.cache.find(channel => channel.name === "discord-features");
+    let classes = newMember.guild.channels.cache.find(channel => channel.name === "choose-classes");
+    let gaming = newMember.guild.channels.cache.find(channel => channel.name === "choose-gaming");
 
+    newMember.roles.add(welcome); //assign first role
+    welcomeChannel.send(`Welcome <@${newMember.user.id}> to CSE & Gaming.\n`
+        + `Please visit ${rulesChannel} and get familiar with the rules of the server.\n`
+        + `Also make sure to visit ${tocChannel} to get familiar with all the server has to offer.\n`
+        + `To get more familiar with Discord itself visit ${discordChannel} for tips, tricks and easter eggs.\n`
+        + `To gain access to class & gaming categories or channels go to ${classes} & ${gaming}.`); 
+    
+    console.log("-\n" + newMember.user.username + " has joined the server.");
+});
+
+cayde.on("guildMemberRemove", leavingMember => {
+    let goodbyeChannel = leavingMember.guild.channels.cache.find(channel => channel.name === "welcome");
+
+    goodbyeChannel.send(`Farewell <@${leavingMember.user.id}> we will miss you.`);
+
+    console.log("-\n" + leavingMember.user.username + " has left the server.");
 });
 
 cayde.on("message", msg =>{ //detects command messages 
     if(msg.channel.type === "dm" && !msg.author.bot){
-        cayde.BotFeatures.get("dming").execute(msg, serverid, fs, random, jsonfile, cayde.BotFeatures);
+        cayde.BotFeatures.get("dming").execute(msg, serverid, fs, jsonfile, cayde.BotFeatures, cayde.BotGames);
         return;
     }
     if(!msg.content.startsWith(prefix) && !msg.author.bot){

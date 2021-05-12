@@ -9,8 +9,8 @@ module.exports = {
         }
         
         var stats = {}; //make empty list for 
-        if(fs.existsSync("./BotStorage/stats.json")){
-            stats = jsonfile.readFileSync("./BotStorage/stats.json");
+        if(fs.existsSync("./BotStorage/Server/stats.json")){
+            stats = jsonfile.readFileSync("./BotStorage/Server/stats.json");
         }
 
         if(msg.guild.id in stats === false){
@@ -33,10 +33,21 @@ module.exports = {
             userstats.xp += random.int(15, 25);
             userstats.playTokens += 5;
             userstats.last_msg = Date.now();
-    
+
+            console.log("-\n" + msg.author.username + " gained some xp & tokens.");
+
+            if(msg.channel.name.endsWith("-help")){
+                userstats.xp += random.int(10, 15);
+                console.log(msg.author.username + " help channel bonus.");
+            }
+            if(msg.attachments.size > 0){
+                userstats.xp += random.int(5, 10);
+                console.log(msg.author.username + " file upload bonus.");
+            }
 
             const xpToNextLevel = 5 * Math.pow(userstats.level, 2) + 50 * userstats.level + 100;
             if(userstats.xp >= xpToNextLevel){
+                console.log("-\n" + msg.author.username + " has gained a level.")
                 var LVmsg = 0;
                 var premsg = "";
                 var midmsg = " has reached";
@@ -61,11 +72,37 @@ module.exports = {
                 if(LVmsg === 4){
                     midmsg = " advanced to"
                 }
+                const peon = msg.guild.roles.cache.find(role => role.name === "Peon");
+                const apprentice = msg.guild.roles.cache.find(role => role.name === "Apprentice");
+                const journeyman = msg.guild.roles.cache.find(role => role.name === "Journeyman");
+                const master = msg.guild.roles.cache.find(role => role.name === "Master");
+                const grandmaster = msg.guild.roles.cache.find(role => role.name === "GrandMaster");
+
+                if(userstats.level >= 5 && userstats.level < 25){
+                    msg.member.roles.remove(peon);
+                    msg.member.roles.add(apprentice);
+                    console.log(msg.author.username + " is now an apprentice.");
+                }
+                if(userstats.level >= 25 && userstats.level < 50){
+                    msg.member.roles.remove(apprentice);
+                    msg.member.roles.add(journeyman);
+                    console.log(msg.author.username + " is now a journeyman.");
+                }
+                if(userstats.level >= 50 && userstats.level < 100){
+                    msg.member.roles.remove(journeyman);
+                    msg.member.roles.add(master);
+                    console.log(msg.author.username + " is now a master.");
+                }
+                if(userstats.level >= 100){
+                    msg.member.roles.remove(master);
+                    msg.member.roles.add(grandmaster);
+                    console.log(msg.author.username + " is now a grand master.");
+                }
+
                 announcement.send(premsg + `<@${msg.author.id}>` + midmsg + " level " 
                     + "**" + userstats.level + "**" + postmsg);
             }
-            jsonfile.writeFileSync("./Botstorage/stats.json", stats);
-            console.log(msg.author.username + " gained some xp & tokens");
         }
+        jsonfile.writeFileSync("./Botstorage/Server/stats.json", stats);
     }
 }

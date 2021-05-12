@@ -1,7 +1,7 @@
 module.exports = {
     name: "dming", 
     description: "actions when dming the bot including games",
-    async execute(msg, fs, guild, random, jsonfile, caydeBotFeatures){
+    async execute(msg, fs, guild, jsonfile, features, games){
         const greeting = msg.content.toLowerCase();
         const reply = msg.author;
 
@@ -22,7 +22,7 @@ module.exports = {
             if(greeting === "server"){
                 reply.send("**I am currently programed to asist in the following on the CSE & Gameing server:**\n"
                     + "Embeding class and gaming role choice messages.\n" 
-                    + "Tracking and awarding XP, Levels and Game Tokens for participating on the server.\n"
+                    + "Tracking and awarding XP, Levels, Game Tokens and exclusive roles for participating on the server.\n"
                     + "Sending animated emojis for users that dont have nitro.\n\n"
                     
                     + "**I am also programmed to conduct the following in DMs:**\n" 
@@ -31,16 +31,32 @@ module.exports = {
                     return;
             }
             if(greeting === "games"){
-                reply.send("**I am currently programed to play or facilitate the following games:**\n"
-                    + "**Dice Games:**\n"
-
+                reply.send("I am currently programed to play or facilitate the following games:\n"
                     + "**Card Games:**\n"
+                    //+ "21\n"
+                    //+ "Durak\n"
+                    //+ "Egyptian War\n"
+                    //+ "Go Fish\n"
+                    //+ "Old Maid\n"
+                    //+ "Slap Jack\n"
+                    //+ "UNO\n"
+                    + "War\n\n"
+
+                    + "**Dice Games:**\n"
+                    //+ "Bar Dice(Ship, Captain, Crew)\n"
+                    //+ "Farkle\n"
+                    //+ "Yacht\n"
+                    //+ "Yahtzee\n\n"
                     
                     + "**Text RPG Games:**\n");
+
                 return;
             }
+            if(greeting === "war"){
+                games.get("war").execute(msg);
+            }
             if(greeting === "stats"){
-                caydeBotFeatures.get("getstats").execute(msg, guild, fs, random, jsonfile, caydeBotFeatures);
+                features.get("getstats").execute(msg, guild, fs, jsonfile);
                 return;
             }
             if(greeting === "help"){
