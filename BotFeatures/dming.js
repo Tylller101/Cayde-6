@@ -30,9 +30,22 @@ module.exports = {
                     + "Inform users of there server stats or game stats(if applicable)");
                     return;
             }
+            if(greeting === "pvp"){
+                reply.send("PvP stands for Player Vs. Player.");
+                return;
+            }
+            if(greeting === "pve"){
+                reply.send("PvE stands for Player Vs. Environment(aka me Cayde-6)");
+                return;
+            }
+            if(greeting === "pvpve"){
+                reply.send("PvPvE stands for Player Vs. Player Vs. Environment(aka me Cayde-6)");
+                return;
+            }
             if(greeting === "games"){
                 reply.send("I am currently programed to play or facilitate the following games:\n"
                     + "**Card Games:**\n"
+                    + "sorry no card games are coded at the moment\n"
                     //+ "21\n"
                     //+ "Durak\n"
                     //+ "Egyptian War\n"
@@ -40,20 +53,27 @@ module.exports = {
                     //+ "Old Maid\n"
                     //+ "Slap Jack\n"
                     //+ "UNO\n"
-                    + "War\n\n"
+                    //+ "War\n\n"
 
                     + "**Dice Games:**\n"
+                    + "sorry no dice games are coded at the moment\n"
                     //+ "Bar Dice(Ship, Captain, Crew)\n"
                     //+ "Farkle\n"
                     //+ "Yacht\n"
                     //+ "Yahtzee\n\n"
                     
-                    + "**Text RPG Games:**\n");
+                    + "**Text RPG Games:**\n"
+                    + "sorry no RPG games are coded at the moment\n"
+                    //+ "Dungeon delve\n"
+                    //+ "Castle climb\n"
+                    //+ ""
+                    );
 
                 return;
             }
             if(greeting === "war"){
-                games.get("war").execute(msg);
+                games.get("war").execute(msg, fs, random, jsonfile);
+                return;
             }
             if(greeting === "stats"){
                 features.get("getstats").execute(msg, guild, fs, jsonfile);
