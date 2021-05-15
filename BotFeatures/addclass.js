@@ -155,8 +155,9 @@ module.exports = {
             if(user.bot || !reaction.message.guild){
                 return;
             }
+
             const classAdd = await reaction.message.guild.members.cache.get(user.id).roles;
-            if(reaction.message.channel.id == channel){
+            if(reaction.message.channel.id == classes){
                 if(reaction.emoji.name === math021Emoji){
                     classAdd.add(math021);
                 }
@@ -193,7 +194,7 @@ module.exports = {
                 if(reaction.emoji.name === cse024Emoji){
                     classAdd.add(cse024);
                 }
-                if(reaction.emoji.name === cse30Emoji){
+                if(reaction.emoji.name === cse030Emoji){
                     classAdd.add(cse030);
                 }
                 if(reaction.emoji.name === cse031Emoji){
@@ -239,6 +240,7 @@ module.exports = {
             else{
                 return;
             }
+            console.log("-\n" + user.username + " added a class");
         });
 
         cayde.on("messageReactionRemove", async (reaction, user) =>{
@@ -251,89 +253,92 @@ module.exports = {
             if(user.bot || !reaction.message.guild){
                 return;
             }
-            if(reaction.message.channel.id == channel){
+
+            const classRemove = await reaction.message.guild.members.cache.get(user.id).roles;
+            if(reaction.message.channel.id == classes){
                 if(reaction.emoji.name === math021Emoji){
-                    classAdd.remove(math021);
+                    classRemove.remove(math021);
                 }
                 if(reaction.emoji.name === math022Emoji){
-                    classAdd.remove(math022);
+                    classRemove.remove(math022);
                 }
                 if(reaction.emoji.name === math023Emoji){
-                    classAdd.remove(math023);
+                    classRemove.remove(math023);
                 }
                 if(reaction.emoji.name === math024Emoji){
-                    classAdd.remove(math024);
+                    classRemove.remove(math024);
                 }
                 if(reaction.emoji.name === math032Emoji){
-                    classAdd.remove(math032);
+                    classRemove.remove(math032);
                 }
                 if(reaction.emoji.name === phys008Emoji){
-                    classAdd.remove(phys008);
+                    classRemove.remove(phys008);
                 }
                 if(reaction.emoji.name === phys009Emoji){
-                    classAdd.remove(phys009);
+                    classRemove.remove(phys009);
                 }
                 if(reaction.emoji.name === engr065Emoji){
-                    classAdd.remove(engr065);
+                    classRemove.remove(engr065);
                 }
                 if(reaction.emoji.name === engr191Emoji){
-                    classAdd.remove(engr191);
+                    classRemove.remove(engr191);
                 }
                 if(reaction.emoji.name === cse015Emoji){
-                    classAdd.remove(cse015);
+                    classRemove.remove(cse015);
                 }
                 if(reaction.emoji.name === cse022Emoji){
-                    classAdd.remove(cse022);
+                    classRemove.remove(cse022);
                 }
                 if(reaction.emoji.name === cse024Emoji){
-                    classAdd.remove(cse024);
+                    classRemove.remove(cse024);
                 }
-                if(reaction.emoji.name === cse30Emoji){
-                    classAdd.remove(cse030);
+                if(reaction.emoji.name === cse030Emoji){
+                    classRemove.remove(cse030);
                 }
                 if(reaction.emoji.name === cse031Emoji){
-                    classAdd.remove(cse031);
+                    classRemove.remove(cse031);
                 }
                 if(reaction.emoji.name === cse100Emoji){
-                    classAdd.remove(cse100);
+                    classRemove.remove(cse100);
                 }
                 if(reaction.emoji.name === cse120Emoji){
-                    classAdd.remove(cse120);
+                    classRemove.remove(cse120);
                 }
                 if(reaction.emoji.name === cse106Emoji){
-                    classAdd.remove(cse106);
+                    classRemove.remove(cse106);
                 }
                 if(reaction.emoji.name === cse111Emoji){
-                    classAdd.remove(cse111);
+                    classRemove.remove(cse111);
                 }
                 if(reaction.emoji.name === cse140Emoji){
-                    classAdd.remove(cse140);
+                    classRemove.remove(cse140);
                 }
                 if(reaction.emoji.name === cse150Emoji){
-                    classAdd.remove(cse150);
+                    classRemove.remove(cse150);
                 }
                 if(reaction.emoji.name === cse160Emoji){
-                    classAdd.remove(cse160);
+                    classRemove.remove(cse160);
                 }
                 if(reaction.emoji.name === cse162Emoji){
-                    classAdd.remove(cse162);
+                    classRemove.remove(cse162);
                 }
                 if(reaction.emoji.name === cse165Emoji){
-                    classAdd.remove(cse165);
+                    classRemove.remove(cse165);
                 }
                 if(reaction.emoji.name === cse175Emoji){
-                    classAdd.remove(cse175);
+                    classRemove.remove(cse175);
                 }
                 if(reaction.emoji.name === cse178Emoji){
-                    classAdd.remove(cse178);
+                    classRemove.remove(cse178);
                 }
                 if(reaction.emoji.name === cse185Emoji){
-                    classAdd.remove(cse185);
+                    classRemove.remove(cse185);
                 }
             }
             else{
                 return;
             }
+            console.log("-\n" + user.username + " removed a class");
         });
     }
 }

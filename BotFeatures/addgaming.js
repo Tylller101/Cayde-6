@@ -5,7 +5,7 @@ module.exports = {
         const gaming = msg.guild.channels.cache.find(channel => channel.name === "choose-gaming");
 
         const mobile = msg.guild.roles.cache.find(role => role.name === "Mobile Gamer");
-        const console = msg.guild.roles.cache.find(role => role.name === "Console Gamer");
+        const consoles = msg.guild.roles.cache.find(role => role.name === "Console Gamer");
         const VR = msg.guild.roles.cache.find(role => role.name === "VR Gamer");
         const PC = msg.guild.roles.cache.find(role => role.name === "PC Gamer");
         const flash = msg.guild.roles.cache.find(role => role.name === "Flash Gamer");
@@ -15,7 +15,7 @@ module.exports = {
         const teamnintendo = msg.guild.roles.cache.find(role => role.name === "Team Nintendo");
     
         const mobileEmoji = "📱";
-        const consoleEmoji = "🎮";
+        const consolesEmoji = "🎮";
         const VREmoji = msg.guild.emojis.cache.find(emoji => emoji.name === "oculus");
         const PCEmoji = "🖥️";
         const flashEmoji = msg.guild.emojis.cache.find(emoji => emoji.name === "adobe_flash");
@@ -31,7 +31,7 @@ module.exports = {
 
         + "**Gaming Categories:\n**"
             + `${mobileEmoji} for Mobile gaming\n`
-            + `${consoleEmoji} for Console Gameing\n`
+            + `${consolesEmoji} for Console Gameing\n`
             + `${VREmoji} for VR Gaming\n`
             + `${PCEmoji} for PC Gaming\n`
             + `${flashEmoji} for Flash Gameing\n\n`
@@ -44,7 +44,7 @@ module.exports = {
 
         let msgEmbed = await gaming.send(embed);
         msgEmbed.react(mobileEmoji);
-        msgEmbed.react(consoleEmoji);
+        msgEmbed.react(consolesEmoji);
         msgEmbed.react(VREmoji);
         msgEmbed.react(PCEmoji);
         msgEmbed.react(flashEmoji);
@@ -65,41 +65,43 @@ module.exports = {
             if(user.bot || !reaction.message.guild){
                 return;
             }
-            const classAdd = await reaction.message.guild.members.cache.get(user.id).roles;
-            if(reaction.message.channel.id == channel){
+
+            const gamingAdd = await reaction.message.guild.members.cache.get(user.id).roles;
+            if(reaction.message.channel.id == gaming){
                 if(reaction.emoji.name === mobileEmoji){
-                    classAdd.add(mobile);
+                    gamingAdd.add(mobile);
                 }
-                if(reaction.emoji.name === consoleEmoji){
-                    classAdd.add(console);
+                if(reaction.emoji.name === consolesEmoji){
+                    gamingAdd.add(consoles);
                 }
                 if(reaction.emoji.name === VREmoji){
-                    classAdd.add(VR);
+                    gamingAdd.add(VR);
                 }
                 if(reaction.emoji.name === PCEmoji){
-                    classAdd.add(PC);
+                    gamingAdd.add(PC);
                 }
                 if(reaction.emoji.name === flashEmoji){
-                    classAdd.add(flash);
+                    gamingAdd.add(flash);
                 }
                 if(reaction.emoji.name === teamxboxEmoji){
-                    classAdd.add(teamxbox);
+                    gamingAdd.add(teamxbox);
                 }
                 if(reaction.emoji.name === teamplaystationEmoji){
-                    classAdd.add(teamplaystation);
+                    gamingAdd.add(teamplaystation);
                 }
                 if(reaction.emoji.name === teamnintendoEmoji){
-                    classAdd.add(teamnintendo);
+                    gamingAdd.add(teamnintendo);
                 }
             }
             else{
                 return;
             }
+            console.log("-\n" + user.username + " added a gaming section");
         });
 
         cayde.on("messageReactionRemove", async (reaction, user) =>{
             if(reaction.message.partial){
-                await reaction.msg.fetch();
+                await reaction.message.fetch();
             }
             if(reaction.partial){
                 await reaction.fetch();
@@ -107,35 +109,38 @@ module.exports = {
             if(user.bot || !reaction.message.guild){
                 return;
             }
-            if(reaction.message.channel.id == channel){
+
+            const gamingRemove = await reaction.message.guild.members.cache.get(user.id).roles;
+            if(reaction.message.channel.id == gaming){
                 if(reaction.emoji.name === mobileEmoji){
-                    classAdd.remove(mobile);
+                    gamingRemove.remove(mobile);
                 }
-                if(reaction.emoji.name === consoleEmoji){
-                    classAdd.remove(console);
+                if(reaction.emoji.name === consolesEmoji){
+                    gamingRemove.remove(consoles);
                 }
                 if(reaction.emoji.name === VREmoji){
-                    classAdd.remove(VR);
+                    gamingRemove.remove(VR);
                 }
                 if(reaction.emoji.name === PCEmoji){
-                    classAdd.remove(PC);
+                    gamingRemove.remove(PC);
                 }
                 if(reaction.emoji.name === flashEmoji){
-                    classAdd.remove(flash);
+                    gamingRemove.remove(flash);
                 }
                 if(reaction.emoji.name === teamxboxEmoji){
-                    classAdd.remove(teamxbox);
+                    gamingRemove.remove(teamxbox);
                 }
                 if(reaction.emoji.name === teamplaystationEmoji){
-                    classAdd.remove(teamplaystation);
+                    gamingRemove.remove(teamplaystation);
                 }
                 if(reaction.emoji.name === teamnintendoEmoji){
-                    classAdd.remove(teamnintendo);
+                    gamingRemove.remove(teamnintendo);
                 }
             }
             else{
                 return;
             }
+            console.log("-\n" + user.username + " removed a gaming section");
         });
     }
 }

@@ -61,6 +61,11 @@ cayde.on("message", msg =>{ //detects command messages
         cayde.BotFeatures.get("dming").execute(msg, serverid, fs, jsonfile, cayde.BotFeatures, cayde.BotGames);
         return;
     }
+    if(msg.content.startsWith(":") && msg.content.endsWith(":")){
+        const args = msg.content.slice(1, -1);
+
+        cayde.BotFeatures.get("uselockedemojis").execute(msg, args);
+    }
     if(!msg.content.startsWith(prefix) && !msg.author.bot){
         cayde.BotFeatures.get("leveler").execute(msg, fs, random, jsonfile);
         return;
