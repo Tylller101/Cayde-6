@@ -1,7 +1,7 @@
 module.exports = {
     name: "leveler", 
     description: "tracks and gives xp", 
-    async execute(msg, fs, random, jsonfile){
+    execute(msg, fs, random, jsonfile){
         const announcement = msg.guild.channels.cache.find(channel => channel.name === "bot-announcements"); 
 
         if(msg.channel.type === "dm"){
@@ -29,7 +29,7 @@ module.exports = {
         }        
         const userstats = guildstats[msg.author.id];
     
-        if(Date.now() - userstats.last_msg >= 60000){
+        if(Date.now() - userstats.last_msg >= 1000){
             userstats.xp += random.int(15, 25);
             userstats.playTokens += 5;
             userstats.last_msg = Date.now();
@@ -81,22 +81,30 @@ module.exports = {
                 if(userstats.level >= 5 && userstats.level < 25){
                     msg.member.roles.remove(peon);
                     msg.member.roles.add(apprentice);
+                    postmsg = " and is now an Apprentice";
+
                     console.log(msg.author.username + " is now an apprentice.");
                 }
                 if(userstats.level >= 25 && userstats.level < 50){
                     msg.member.roles.remove(apprentice);
                     msg.member.roles.add(journeyman);
+                    postmsg = " and is now a Journeyman";
+
                     console.log(msg.author.username + " is now a journeyman.");
                 }
                 if(userstats.level >= 50 && userstats.level < 100){
                     msg.member.roles.remove(journeyman);
                     msg.member.roles.add(master);
+                    postmsg = " and is now a Master";
+
                     console.log(msg.author.username + " is now a master.");
                 }
                 if(userstats.level >= 100){
                     msg.member.roles.remove(master);
                     msg.member.roles.add(grandmaster);
-                    console.log(msg.author.username + " is now a grand master.");
+                    postmsg = " and is now a GrandMaster";
+                    
+                    console.log(msg.author.username + " is now a grandmaster.");
                 }
 
                 announcement.send(premsg + `<@${msg.author.id}>` + midmsg + " level " 

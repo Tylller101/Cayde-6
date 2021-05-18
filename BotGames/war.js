@@ -1,6 +1,6 @@
 module.exports = {
-    name: "leveler", 
-    description: "tracks and gives xp", 
+    name: "war", 
+    description: "play the game war", 
     async execute(msg, fs, random, jsonfile){
         const reply = msg.author;
 
@@ -13,7 +13,7 @@ module.exports = {
         let collector = msg.author.creatMessageCollector(filter, options);
 
         collector.on("collect", msg =>{
-            
+
         });
 
     }

@@ -27,6 +27,7 @@ module.exports = {
                     
                     + "**I am also programmed to conduct the following in DMs:**\n" 
                     + "Facilitate PvP, PvE or PvPvE games(if you dont know what those mean just type it in the chat)\n"
+                    + "I can \"Draw a card\" or \"Roll a die\"\n"
                     + "Inform users of there server stats or game stats(if applicable)");
                     return;
             }
@@ -40,6 +41,14 @@ module.exports = {
             }
             if(greeting === "pvpve"){
                 reply.send("PvPvE stands for Player Vs. Player Vs. Environment(aka me Cayde-6)");
+                return;
+            }
+            if(greeting === "draw a card"){
+                features.get("drawcard").execute(msg, guild, fs, jsonfile);
+                return;
+            }
+            if(greeting === "roll a die"){
+                features.get("roledice").execute(msg, guild, fs, jsonfile);
                 return;
             }
             if(greeting === "games"){
