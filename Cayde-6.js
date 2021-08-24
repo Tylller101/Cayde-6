@@ -57,6 +57,13 @@ cayde.on("guildMemberRemove", leavingMember => {
 });
 
 cayde.on("message", msg =>{ //detects command messages 
+    // const peon = msg.guild.roles.cache.find(role => role.name === "Peon");
+    // const findpeon = msg.member.roles.cache.some(role => role.name === "Peon"); 
+    // const findapprentice = msg.member.roles.cache.some(role => role.name === "Apprentice");
+    // const findjourneyman = msg.member.roles.cache.some(role => role.name ==="Journeyman");
+    // const findmaster = msg.member.roles.cache.some(role => role.name === "Master");
+    // const findgrandmaster = msg.member.roles.cache.some(role => role.name === "GrandMaster");
+    
     if(msg.channel.type === "dm" && !msg.author.bot){
         cayde.BotFeatures.get("dming").execute(msg, serverid, fs, jsonfile, cayde.BotFeatures, cayde.BotGames);
         return;
@@ -66,7 +73,17 @@ cayde.on("message", msg =>{ //detects command messages
 
         cayde.BotFeatures.get("uselockedemojis").execute(msg, args);
     }
-    if(!msg.content.startsWith(prefix) && !msg.author.bot){
+    if(!msg.content.startsWith(prefix) && !msg.author.bot){ //old member getting peon role if has no ranking role
+        const peon = msg.guild.roles.cache.find(role => role.name === "Peon");
+        const findpeon = msg.member.roles.cache.some(role => role.name === "Peon"); 
+        const findapprentice = msg.member.roles.cache.some(role => role.name === "Apprentice");
+        const findjourneyman = msg.member.roles.cache.some(role => role.name ==="Journeyman");
+        const findmaster = msg.member.roles.cache.some(role => role.name === "Master");
+        const findgrandmaster = msg.member.roles.cache.some(role => role.name === "GrandMaster");
+
+        if(!findpeon && !findapprentice && !findjourneyman && !findmaster && !findgrandmaster){
+            msg.member.roles.add(peon);
+        }
         cayde.BotFeatures.get("leveler").execute(msg, fs, random, jsonfile);
         return;
     }

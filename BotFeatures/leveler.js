@@ -29,7 +29,7 @@ module.exports = {
         }        
         const userstats = guildstats[msg.author.id];
     
-        if(Date.now() - userstats.last_msg >= 1000){
+        if(Date.now() - userstats.last_msg >= 60000){
             userstats.xp += random.int(15, 25);
             userstats.playTokens += 5;
             userstats.last_msg = Date.now();
@@ -81,28 +81,28 @@ module.exports = {
                 if(userstats.level >= 5 && userstats.level < 25){
                     msg.member.roles.remove(peon);
                     msg.member.roles.add(apprentice);
-                    postmsg = " and is now an Apprentice";
+                    postmsg = " and is now a server Apprentice";
 
                     console.log(msg.author.username + " is now an apprentice.");
                 }
                 if(userstats.level >= 25 && userstats.level < 50){
                     msg.member.roles.remove(apprentice);
                     msg.member.roles.add(journeyman);
-                    postmsg = " and is now a Journeyman";
+                    postmsg = " and is now a server Journeyman";
 
                     console.log(msg.author.username + " is now a journeyman.");
                 }
                 if(userstats.level >= 50 && userstats.level < 100){
                     msg.member.roles.remove(journeyman);
                     msg.member.roles.add(master);
-                    postmsg = " and is now a Master";
+                    postmsg = " and is now a server Master";
 
                     console.log(msg.author.username + " is now a master.");
                 }
                 if(userstats.level >= 100){
                     msg.member.roles.remove(master);
                     msg.member.roles.add(grandmaster);
-                    postmsg = " and is now a GrandMaster";
+                    postmsg = " and is now a server GrandMaster";
                     
                     console.log(msg.author.username + " is now a grandmaster.");
                 }
