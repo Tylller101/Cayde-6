@@ -29,7 +29,7 @@ module.exports = {
         }        
         const userstats = guildstats[msg.author.id];
     
-        if(Date.now() - userstats.last_msg >= 1000){
+        if(Date.now() - userstats.last_msg >= 60000){
             userstats.xp += random.int(15, 25);
             userstats.playTokens += 5;
             userstats.last_msg = Date.now();
