@@ -21,10 +21,10 @@ module.exports = {
         if(msg.author.id in guildstats === false){
             guildstats[msg.author.id] = {
                 name: msg.author.username,
-                xp: 0,
+                xp: null,
                 level: 0,
-                playTokens: 0,
-                last_msg: 0, 
+                playTokens: null,
+                last_msg: null, 
             };
         }        
         const userstats = guildstats[msg.author.id];
