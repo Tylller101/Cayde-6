@@ -31,7 +31,7 @@ cayde.on("ready", () =>{ //cayde is online
 
 cayde.on("guildMemberAdd", newMember =>{ //when a person enters the server
     let welcome = newMember.guild.roles.cache.find(role => role.name === "Peon"); //newest members
-    let welcomeChannel = newMember.guild.channels.cache.find(channel => channel.name === "welcome");
+    let welcomeChannel = newMember.guild.channels.cache.find(channel => channel.name === "welcome-portal");
     let rulesChannel = newMember.guild.channels.cache.find(channel => channel.name === "rules-and-regs");
     let tocChannel = newMember.guild.channels.cache.find(channel => channel.name === "server-contents");
     let discordChannel = newMember.guild.channels.cache.find(channel => channel.name === "discord-features");
@@ -49,7 +49,7 @@ cayde.on("guildMemberAdd", newMember =>{ //when a person enters the server
 });
 
 cayde.on("guildMemberRemove", leavingMember => {
-    let goodbyeChannel = leavingMember.guild.channels.cache.find(channel => channel.name === "welcome");
+    let goodbyeChannel = leavingMember.guild.channels.cache.find(channel => channel.name === "welcome-portal");
 
     goodbyeChannel.send(`Farewell <@${leavingMember.user.id}> we will miss you.`);
 
