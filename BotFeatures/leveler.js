@@ -38,10 +38,12 @@ module.exports = {
 
             if(msg.channel.name.endsWith("-help")){
                 userstats.xp += random.int(10, 15);
+                userstats.playTokens += 1;
                 console.log(msg.author.username + " help channel bonus.");
             }
             if(msg.attachments.size > 0){
                 userstats.xp += random.int(5, 10);
+                userstats.playTokens += 2;
                 console.log(msg.author.username + " file upload bonus.");
             }
 
