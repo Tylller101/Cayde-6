@@ -81,7 +81,10 @@ cayde.on("message", msg =>{ //detects command messages
         cayde.BotFeatures.get("leveler").execute(msg, fs, random, jsonfile);
         return;
     }
-    if(msg.content.startsWith(prefix)){
+
+    const commandChannel = msg.guild.channels.cache.find(channel => channel.name === "bot-commands");
+
+    if(msg.content.startsWith(prefix) && msg.channel === commandChannel){
         const args = msg.content.slice(prefix.length).split(/ +/);
         const BotCommand = args.shift().toLowerCase();
 
@@ -89,7 +92,7 @@ cayde.on("message", msg =>{ //detects command messages
             cayde.BotFeatures.get("addclasses").execute(msg, Discord, cayde);
         }
         if(BotCommand === "addgaming"){ //adds gaming embed
-            cayde.BotFeatures.get("addgaming").execute(msg, Discord, cayde)
+            cayde.BotFeatures.get("addgaming").execute(msg, Discord, cayde);
         }
     }
 });
