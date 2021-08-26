@@ -8,7 +8,7 @@ const jsonfile = require("jsonfile"); //use jsonfiles
 const prefix = "!$#"; //my prefix
 const featureFiles = fs.readdirSync("./BotFeatures/").filter(file => file.endsWith(".js"));
 const games = fs.readdirSync("./BotGames/").filter(file => file.endsWith(".js"));
-const serverid = "837067148123177001"; //tylller101s server id right now
+const serverid = "750030845078798406"; //CSE & Gaming id
 
 cayde.BotFeatures = new Discord.Collection();
 cayde.BotGames = new Discord.Collection();
@@ -82,17 +82,19 @@ cayde.on("message", msg =>{ //detects command messages
         return;
     }
 
-    const commandChannel = msg.guild.channels.cache.find(channel => channel.name === "bot-commands");
+    if(!msg.channel.type === "dm" && !msg.author.bot){
+        const commandChannel = msg.guild.channels.cache.find(channel => channel.name === "bot-commands");
 
-    if(msg.content.startsWith(prefix) && msg.channel === commandChannel){
-        const args = msg.content.slice(prefix.length).split(/ +/);
-        const BotCommand = args.shift().toLowerCase();
+        if(msg.content.startsWith(prefix) && msg.channel === commandChannel){
+            const args = msg.content.slice(prefix.length).split(/ +/);
+            const BotCommand = args.shift().toLowerCase();
 
-        if(BotCommand === "addclasses"){ //adds classes embed
-            cayde.BotFeatures.get("addclasses").execute(msg, Discord, cayde);
-        }
-        if(BotCommand === "addgaming"){ //adds gaming embed
-            cayde.BotFeatures.get("addgaming").execute(msg, Discord, cayde);
+            if(BotCommand === "addclasses"){ //adds classes embed
+                cayde.BotFeatures.get("addclasses").execute(msg, Discord, cayde);
+            }
+            if(BotCommand === "addgaming"){ //adds gaming embed
+                cayde.BotFeatures.get("addgaming").execute(msg, Discord, cayde);
+            }
         }
     }
 });

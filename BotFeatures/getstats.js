@@ -9,12 +9,14 @@ module.exports = {
         }
         else{
             msg.author.send("Sorry I can not find my stats file. I may be under maintenance sorry for the inconvenience.");
+            return;
         }
 
         const guildstats = stats[guild];
 
         if(msg.author.id in guildstats === false){
             msg.author.send("Sorry but it appears you have not participated on the server and therefore have no stats to view.");
+            return;
         }
         else{
             const userstats = guildstats[msg.author.id];

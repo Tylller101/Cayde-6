@@ -4,7 +4,7 @@ module.exports = {
     execute(msg, fs, random, jsonfile){
         const announcement = msg.guild.channels.cache.find(channel => channel.name === "bot-announcements"); 
 
-        if(msg.channel.type === "dm"){
+        if(msg.channel.type === "dm" || !msg.guild.name === "CSE & Gaming"){
             return;
         }
         
