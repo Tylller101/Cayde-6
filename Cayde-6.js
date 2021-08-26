@@ -91,9 +91,11 @@ cayde.on("message", msg =>{ //detects command messages
 
             if(BotCommand === "addclasses"){ //adds classes embed
                 cayde.BotFeatures.get("addclasses").execute(msg, Discord, cayde);
+                msg.delete();
             }
             if(BotCommand === "addgaming"){ //adds gaming embed
                 cayde.BotFeatures.get("addgaming").execute(msg, Discord, cayde);
+                msg.delete();
             }
         }
     }
