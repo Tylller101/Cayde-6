@@ -4,8 +4,7 @@ module.exports = {
     async execute(msg, fs, guild, jsonfile, features, games){
         const greeting = msg.content.toLowerCase();
         const reply = msg.author;
-
-        if(msg.channel.type === "dm" ){
+        
             if(greeting === "hi" || greeting === "hello"){
                 reply.send("Hello! Im Cayde-6 the Official bot of the CSE & Gaming server.");
                 return;
@@ -97,6 +96,6 @@ module.exports = {
             else{
                 msg.author.send("Sorry i do not know that command check your spelling or try using \"help\" ");
             }
-        }
+        //}
     }
 }

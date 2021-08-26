@@ -82,10 +82,10 @@ cayde.on("message", msg =>{ //detects command messages
         return;
     }
 
-    if(!msg.channel.type === "dm" && !msg.author.bot){
-        const commandChannel = msg.guild.channels.cache.find(channel => channel.name === "bot-commands");
+    if(msg.content.startsWith(prefix) && !msg.author.bot){
+        let commandChannel = msg.guild.channels.cache.find(channel => channel.name === "bot-commands");
 
-        if(msg.content.startsWith(prefix) && msg.channel === commandChannel){
+        if(msg.channel === commandChannel){
             const args = msg.content.slice(prefix.length).split(/ +/);
             const BotCommand = args.shift().toLowerCase();
 
