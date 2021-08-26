@@ -74,22 +74,22 @@ module.exports = {
                 if(reaction.emoji.name === consolesEmoji){
                     gamingAdd.add(consoles);
                 }
-                if(reaction.emoji.name === VREmoji){
+                if(reaction.emoji.name === "oculus"){
                     gamingAdd.add(VR);
                 }
                 if(reaction.emoji.name === PCEmoji){
                     gamingAdd.add(PC);
                 }
-                if(reaction.emoji.name === flashEmoji){
+                if(reaction.emoji.name === "adobe_flash"){
                     gamingAdd.add(flash);
                 }
-                if(reaction.emoji.name === teamxboxEmoji){
+                if(reaction.emoji.name === "xbox"){
                     gamingAdd.add(teamxbox);
                 }
-                if(reaction.emoji.name === teamplaystationEmoji){
+                if(reaction.emoji.name === "playstation"){
                     gamingAdd.add(teamplaystation);
                 }
-                if(reaction.emoji.name === teamnintendoEmoji){
+                if(reaction.emoji.name === "nintendo_64_controller"){
                     gamingAdd.add(teamnintendo);
                 }
             }
@@ -118,22 +118,22 @@ module.exports = {
                 if(reaction.emoji.name === consolesEmoji){
                     gamingRemove.remove(consoles);
                 }
-                if(reaction.emoji.name === VREmoji){
+                if(reaction.emoji.name === "oculus"){
                     gamingRemove.remove(VR);
                 }
                 if(reaction.emoji.name === PCEmoji){
                     gamingRemove.remove(PC);
                 }
-                if(reaction.emoji.name === flashEmoji){
+                if(reaction.emoji.name === "adobe_flash"){
                     gamingRemove.remove(flash);
                 }
-                if(reaction.emoji.name === teamxboxEmoji){
+                if(reaction.emoji.name === "xbox"){
                     gamingRemove.remove(teamxbox);
                 }
-                if(reaction.emoji.name === teamplaystationEmoji){
+                if(reaction.emoji.name === "playstation"){
                     gamingRemove.remove(teamplaystation);
                 }
-                if(reaction.emoji.name === teamnintendoEmoji){
+                if(reaction.emoji.name === "nintendo_64_controller"){
                     gamingRemove.remove(teamnintendo);
                 }
             }

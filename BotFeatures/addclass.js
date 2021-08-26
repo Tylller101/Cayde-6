@@ -30,6 +30,7 @@ module.exports = {
         const cse160 = msg.guild.roles.cache.find(role => role.name === "CSE160");
         const cse162 = msg.guild.roles.cache.find(role => role.name === "CSE162");
         const cse165 = msg.guild.roles.cache.find(role => role.name === "CSE165");
+        const cse168 = msg.guild.roles.cache.find(role => role.name === "CSE168");
         const cse175 = msg.guild.roles.cache.find(role => role.name === "CSE175");
         const cse178 = msg.guild.roles.cache.find(role => role.name === "CSE178");
         const cse185 = msg.guild.roles.cache.find(role => role.name === "CSE185");
@@ -60,6 +61,7 @@ module.exports = {
         const cse160Emoji = "🖱️";
         const cse162Emoji = "📱";
         const cse165Emoji = "💯";
+        const cse168Emoji = "📡";
         const cse175Emoji = "📜";
         const cse178Emoji = "👮";
         const cse185Emoji = "👁️";
@@ -108,6 +110,7 @@ module.exports = {
             + `${cse160Emoji} for CSE160: Computer Networks\n`
             + `${cse162Emoji} for CSE162: Mobile Computing\n`
             + `${cse165Emoji} for CSE165: Introduction to Object Oriented Programming\n`
+            + `${cse168Emoji} for CSE168: Distributed Software Systems\n`
             + `${cse175Emoji} for CSE175: Introduction to Artificial Intelligence\n`
             + `${cse178Emoji} for CSE178: Computers & Networks Security\n`
             + `${cse185Emoji} for CSE185: Introduction to Computer Vision`);
@@ -140,6 +143,7 @@ module.exports = {
         msgEmbed2.react(cse160Emoji);
         msgEmbed2.react(cse162Emoji);
         msgEmbed2.react(cse165Emoji);
+        msgEmbed2.react(cse168Emoji);
         msgEmbed2.react(cse175Emoji);
         msgEmbed2.react(cse178Emoji);
         msgEmbed2.react(cse185Emoji);
@@ -226,6 +230,9 @@ module.exports = {
                 }
                 if(reaction.emoji.name === cse165Emoji){
                     classAdd.add(cse165);
+                }
+                if(reaction.emoji.name === cse168Emoji){
+                    classAdd.add(cse168);
                 }
                 if(reaction.emoji.name === cse175Emoji){
                     classAdd.add(cse175);
@@ -324,6 +331,9 @@ module.exports = {
                 }
                 if(reaction.emoji.name === cse165Emoji){
                     classRemove.remove(cse165);
+                }
+                if(reaction.emoji.name === cse168Emoji){
+                    classRemove.remove(cse168);
                 }
                 if(reaction.emoji.name === cse175Emoji){
                     classRemove.remove(cse175);
