@@ -10,6 +10,9 @@ module.exports = {
         const math024 = msg.guild.roles.cache.find(role => role.name === "MATH024");
         const math032 = msg.guild.roles.cache.find(role => role.name === "MATH032");
 
+        // const math131 = msg.guild.roles.cache.find(role => role.name === "MATH131");
+        // const math141 = msg.guild.roles.cache.find(role => role.name === "MATH141");
+
         const phys008 = msg.guild.roles.cache.find(role => role.name === "PHYS008");
         const phys009 = msg.guild.roles.cache.find(role => role.name === "PHYS009");
 
@@ -22,9 +25,10 @@ module.exports = {
         const cse030 = msg.guild.roles.cache.find(role => role.name === "CSE030");
         const cse031 = msg.guild.roles.cache.find(role => role.name === "CSE031");
         const cse100 = msg.guild.roles.cache.find(role => role.name === "CSE100");
+        const cse120 = msg.guild.roles.cache.find(role => role.name === "CSE120");
+
         const cse106 = msg.guild.roles.cache.find(role => role.name === "CSE106");
         const cse111 = msg.guild.roles.cache.find(role => role.name === "CSE111");
-        const cse120 = msg.guild.roles.cache.find(role => role.name === "CSE120");
         const cse140 = msg.guild.roles.cache.find(role => role.name === "CSE140");
         const cse150 = msg.guild.roles.cache.find(role => role.name === "CSE150");
         const cse160 = msg.guild.roles.cache.find(role => role.name === "CSE160");
@@ -32,6 +36,7 @@ module.exports = {
         const cse165 = msg.guild.roles.cache.find(role => role.name === "CSE165");
         const cse168 = msg.guild.roles.cache.find(role => role.name === "CSE168");
         const cse175 = msg.guild.roles.cache.find(role => role.name === "CSE175");
+        //const cse176 = msg.guild.roles.cache.find(role => role.name === "CSE176");
         const cse178 = msg.guild.roles.cache.find(role => role.name === "CSE178");
         const cse185 = msg.guild.roles.cache.find(role => role.name === "CSE185");
 
@@ -40,6 +45,9 @@ module.exports = {
         const math023Emoji = "🇹";
         const math024Emoji = "🇭";
         const math032Emoji = "🤮";
+
+        // const math131Emoji = "🤓";
+        // const math141Emoji = "";
         
         const phys008Emoji = "📡";
         const phys009Emoji = "🔋";
@@ -53,9 +61,10 @@ module.exports = {
         const cse030Emoji = "👨";
         const cse031Emoji = "😢";
         const cse100Emoji = "💩";
+        const cse120Emoji = "⌨️";
+
         const cse106Emoji = "🗺️";
         const cse111Emoji = "🎛️";
-        const cse120Emoji = "⌨️";
         const cse140Emoji = "🖥️";
         const cse150Emoji = "🪟";
         const cse160Emoji = "🖱️";
@@ -63,6 +72,7 @@ module.exports = {
         const cse165Emoji = "💯";
         const cse168Emoji = "🛰️";
         const cse175Emoji = "📜";
+        //const cse176Emoji = "";
         const cse178Emoji = "👮";
         const cse185Emoji = "👁️";
 
@@ -78,6 +88,10 @@ module.exports = {
             + `${math023Emoji} for MATH023: Vector Calculus \n`
             + `${math024Emoji} for MATH024: Linear Algebra & Differential Equations\n`
             + `${math032Emoji} for MATH032: Probability & Statistics\n\n`
+
+        // + "**Popular Math classes:\n**"
+        //     + `${math131Emoji} for MATH131: \n`
+        //     + `${math141Emoji} for MATH141\n\n`
 
         + "**Required Physics classes:**\n"
             + `${phys008Emoji} for PHYS008: Introductory Physics I\n`
@@ -112,6 +126,7 @@ module.exports = {
             + `${cse165Emoji} for CSE165: Introduction to Object Oriented Programming\n`
             + `${cse168Emoji} for CSE168: Distributed Software Systems\n`
             + `${cse175Emoji} for CSE175: Introduction to Artificial Intelligence\n`
+            //+ `${cse176Emoji} for CSE176: \n`
             + `${cse178Emoji} for CSE178: Computers & Networks Security\n`
             + `${cse185Emoji} for CSE185: Introduction to Computer Vision`);
 
@@ -121,6 +136,9 @@ module.exports = {
         msgEmbed.react(math023Emoji);
         msgEmbed.react(math024Emoji);
         msgEmbed.react(math032Emoji);
+
+        // msgEmbed.react(math131Emoji);
+        // msgEmbed.react(math141Emoji);
 
         msgEmbed.react(phys008Emoji);
         msgEmbed.react(phys009Emoji);
@@ -136,6 +154,7 @@ module.exports = {
         msgEmbed2.react(cse031Emoji);
         msgEmbed2.react(cse100Emoji);
         msgEmbed2.react(cse120Emoji);
+
         msgEmbed2.react(cse106Emoji);
         msgEmbed2.react(cse111Emoji);
         msgEmbed2.react(cse140Emoji);
@@ -145,6 +164,7 @@ module.exports = {
         msgEmbed2.react(cse165Emoji);
         msgEmbed2.react(cse168Emoji);
         msgEmbed2.react(cse175Emoji);
+        //msgEmbed2.react(cse176Emoji);
         msgEmbed2.react(cse178Emoji);
         msgEmbed2.react(cse185Emoji);
 
@@ -177,18 +197,28 @@ module.exports = {
                 if(reaction.emoji.name === math032Emoji){
                     classAdd.add(math032);
                 }
+
+                // if(reaction.emoji.name === math131Emoji){
+                //     classAdd.add(math131);
+                // }
+                // if(reaction.emoji.name === math141Emoji){
+                //     classAdd.add(math141);
+                // }
+
                 if(reaction.emoji.name === phys008Emoji){
                     classAdd.add(phys008);
                 }
                 if(reaction.emoji.name === phys009Emoji){
                     classAdd.add(phys009);
                 }
+
                 if(reaction.emoji.name === engr065Emoji){
                     classAdd.add(engr065);
                 }
                 if(reaction.emoji.name === engr191Emoji){
                     classAdd.add(engr191);
                 }
+
                 if(reaction.emoji.name === cse015Emoji){
                     classAdd.add(cse015);
                 }
@@ -210,6 +240,7 @@ module.exports = {
                 if(reaction.emoji.name === cse120Emoji){
                     classAdd.add(cse120);
                 }
+
                 if(reaction.emoji.name === cse106Emoji){
                     classAdd.add(cse106);
                 }
@@ -237,6 +268,9 @@ module.exports = {
                 if(reaction.emoji.name === cse175Emoji){
                     classAdd.add(cse175);
                 }
+                // if(reaction.emoji.name === cse176Emoji){
+                //     classAdd.add(cse176);
+                // }
                 if(reaction.emoji.name === cse178Emoji){
                     classAdd.add(cse178);
                 }
@@ -278,18 +312,28 @@ module.exports = {
                 if(reaction.emoji.name === math032Emoji){
                     classRemove.remove(math032);
                 }
+
+                // if(reaction.emoji.name === math131Emoji){
+                //     classRemove.remove(math131);
+                // }
+                // if(reaction.emoji.name === math141Emoji){
+                //     classRemove.remove(math141);
+                // }
+
                 if(reaction.emoji.name === phys008Emoji){
                     classRemove.remove(phys008);
                 }
                 if(reaction.emoji.name === phys009Emoji){
                     classRemove.remove(phys009);
                 }
+
                 if(reaction.emoji.name === engr065Emoji){
                     classRemove.remove(engr065);
                 }
                 if(reaction.emoji.name === engr191Emoji){
                     classRemove.remove(engr191);
                 }
+
                 if(reaction.emoji.name === cse015Emoji){
                     classRemove.remove(cse015);
                 }
@@ -311,6 +355,7 @@ module.exports = {
                 if(reaction.emoji.name === cse120Emoji){
                     classRemove.remove(cse120);
                 }
+                
                 if(reaction.emoji.name === cse106Emoji){
                     classRemove.remove(cse106);
                 }
@@ -338,6 +383,9 @@ module.exports = {
                 if(reaction.emoji.name === cse175Emoji){
                     classRemove.remove(cse175);
                 }
+                // if(reaction.emoji.name === cse176Emoji){
+                //     classRemove.remove(cse176);
+                // }
                 if(reaction.emoji.name === cse178Emoji){
                     classRemove.remove(cse178);
                 }
