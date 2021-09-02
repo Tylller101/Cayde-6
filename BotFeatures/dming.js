@@ -4,7 +4,7 @@ module.exports = {
     async execute(msg, fs, guild, jsonfile, features, games){
         const greeting = msg.content.toLowerCase();
         const reply = msg.author;
-        
+           
             if(greeting === "hi" || greeting === "hello"){
                 reply.send("Hello! Im Cayde-6 the Official bot of the CSE & Gaming server.");
                 return;
