@@ -170,10 +170,10 @@ module.exports = {
 
 
         cayde.on("messageReactionAdd", async (reaction, user) =>{
-            if(reaction.message.partial){
+            if(reaction.message.partial && creaction.message.channel.id == classes){
                 await reaction.message.fetch();
             }
-            if(reaction.partial){
+            if(reaction.partial && reaction.message.channel.id == classes){
                 await reaction.fetch();
             }
             if(user.bot || !reaction.message.guild){
@@ -285,10 +285,10 @@ module.exports = {
         });
 
         cayde.on("messageReactionRemove", async (reaction, user) =>{
-            if(reaction.message.partial){
+            if(reaction.message.partial && reaction.message.channel.id == classes){
                 await reaction.msg.fetch();
             }
-            if(reaction.partial){
+            if(reaction.partial && reaction.message.channel.id == classes){
                 await reaction.fetch();
             }
             if(user.bot || !reaction.message.guild){
