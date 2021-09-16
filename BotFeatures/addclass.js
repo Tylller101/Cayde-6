@@ -170,7 +170,7 @@ module.exports = {
 
 
         cayde.on("messageReactionAdd", async (reaction, user) =>{
-            if(reaction.message.partial && creaction.message.channel.id == classes){
+            if(reaction.message.partial && reaction.message.channel.id == classes){
                 await reaction.message.fetch();
             }
             if(reaction.partial && reaction.message.channel.id == classes){
