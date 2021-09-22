@@ -83,28 +83,40 @@ module.exports = {
                 if(userstats.level >= 5 && userstats.level < 25){
                     msg.member.roles.remove(peon);
                     msg.member.roles.add(apprentice);
-                    postmsg = " and is now a server Apprentice";
+
+                        if(userstats.level < 6){
+                            postmsg = " and is now a server Apprentice";
+                        }
 
                     console.log(msg.author.username + " is now an apprentice.");
                 }
                 if(userstats.level >= 25 && userstats.level < 50){
                     msg.member.roles.remove(apprentice);
                     msg.member.roles.add(journeyman);
-                    postmsg = " and is now a server Journeyman";
+
+                        if(userstats.level < 26){
+                            postmsg = " and is now a server Journeyman";
+                        }
 
                     console.log(msg.author.username + " is now a journeyman.");
                 }
                 if(userstats.level >= 50 && userstats.level < 100){
                     msg.member.roles.remove(journeyman);
                     msg.member.roles.add(master);
-                    postmsg = " and is now a server Master";
+
+                        if(userstats.level < 51){
+                            postmsg = " and is now a server Master";
+                        }
 
                     console.log(msg.author.username + " is now a master.");
                 }
                 if(userstats.level >= 100){
                     msg.member.roles.remove(master);
                     msg.member.roles.add(grandmaster);
-                    postmsg = " and is now a server GrandMaster";
+
+                        if(userstats.level < 101){
+                            postmsg = " and is now a server GrandMaster";
+                        }
                     
                     console.log(msg.author.username + " is now a grandmaster.");
                 }
