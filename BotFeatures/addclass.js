@@ -103,13 +103,7 @@ module.exports = {
             
         + "**Required Engineering classes:**\n"
             + `${engr065Emoji} for ENGR065: Circuit Theory\n`
-            + `${engr191Emoji} for ENGR191: Professional Seminar`);
-            
-        let embed2 = new Discord.MessageEmbed()
-        .setColor("#000000")
-        .setTitle("Choose your classes")
-        .setDescription("Choose classes you are taking, have taken, or plan on taking "
-        + "and would like to view and interact with on the server.\n\n"
+            + `${engr191Emoji} for ENGR191: Professional Seminar\n`
 
         + "**Required Computer Science Classes:**\n"
             + `${cse015Emoji} for CSE015: Discrete Mathematics\n`
@@ -118,7 +112,13 @@ module.exports = {
             + `${cse030Emoji} for CSE030: Data Structures\n`
             + `${cse031Emoji} for CSE031: Computer Organization & Assemply Language\n`
             + `${cse100Emoji} for CSE100: Algorithm Design & Analysis\n`
-            + `${cse120Emoji} for CSE120: Software Engineering\n\n`
+            + `${cse120Emoji} for CSE120: Software Engineering\n\n`);
+            
+        let embed2 = new Discord.MessageEmbed()
+        .setColor("#000000")
+        .setTitle("Choose your classes")
+        .setDescription("Choose classes you are taking, have taken, or plan on taking "
+        + "and would like to view and interact with on the server.\n\n"
             
         +"**Popular Computer Science Classes:**\n"
             + `${cse106Emoji} for CSE106: Exploratory Computing\n`
@@ -152,7 +152,6 @@ module.exports = {
         msgEmbed.react(engr065Emoji);
         msgEmbed.react(engr191Emoji);
 
-        let msgEmbed2 = await classes.send(embed2);
         msgEmbed2.react(cse015Emoji);
         msgEmbed2.react(cse022Emoji);
         msgEmbed2.react(cse024Emoji);
@@ -160,6 +159,8 @@ module.exports = {
         msgEmbed2.react(cse031Emoji);
         msgEmbed2.react(cse100Emoji);
         msgEmbed2.react(cse120Emoji);
+
+        let msgEmbed2 = await classes.send(embed2);
 
         msgEmbed2.react(cse106Emoji);
         msgEmbed2.react(cse107Emoji);
