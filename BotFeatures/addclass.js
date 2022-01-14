@@ -103,7 +103,7 @@ module.exports = {
             
         + "**Required Engineering classes:**\n"
             + `${engr065Emoji} for ENGR065: Circuit Theory\n`
-            + `${engr191Emoji} for ENGR191: Professional Seminar\n`
+            + `${engr191Emoji} for ENGR191: Professional Seminar\n\n`
 
         + "**Required Computer Science Classes:**\n"
             + `${cse015Emoji} for CSE015: Discrete Mathematics\n`
@@ -152,13 +152,13 @@ module.exports = {
         msgEmbed.react(engr065Emoji);
         msgEmbed.react(engr191Emoji);
 
-        msgEmbed2.react(cse015Emoji);
-        msgEmbed2.react(cse022Emoji);
-        msgEmbed2.react(cse024Emoji);
-        msgEmbed2.react(cse030Emoji);
-        msgEmbed2.react(cse031Emoji);
-        msgEmbed2.react(cse100Emoji);
-        msgEmbed2.react(cse120Emoji);
+        msgEmbed.react(cse015Emoji);
+        msgEmbed.react(cse022Emoji);
+        msgEmbed.react(cse024Emoji);
+        msgEmbed.react(cse030Emoji);
+        msgEmbed.react(cse031Emoji);
+        msgEmbed.react(cse100Emoji);
+        msgEmbed.react(cse120Emoji);
 
         let msgEmbed2 = await classes.send(embed2);
 
