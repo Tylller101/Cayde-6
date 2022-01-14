@@ -70,33 +70,40 @@ module.exports = {
             if(reaction.message.channel.id == gaming){
                 if(reaction.emoji.name === mobileEmoji){
                     gamingAdd.add(mobile);
+                    console.log("-\n" + user.username + " added mobile gaming role");
                 }
                 if(reaction.emoji.name === consolesEmoji){
                     gamingAdd.add(consoles);
+                    console.log("-\n" + user.username + " added console gaming role");
                 }
                 if(reaction.emoji.name === "oculus"){
                     gamingAdd.add(VR);
+                    console.log("-\n" + user.username + " added VR gaming role");
                 }
                 if(reaction.emoji.name === PCEmoji){
                     gamingAdd.add(PC);
+                    console.log("-\n" + user.username + " added PC gaming role");
                 }
                 if(reaction.emoji.name === "adobe_flash"){
                     gamingAdd.add(flash);
+                    console.log("-\n" + user.username + " added flash gaming role");
                 }
                 if(reaction.emoji.name === "xbox"){
                     gamingAdd.add(teamxbox);
+                    console.log("-\n" + user.username + " added xbox team role");
                 }
                 if(reaction.emoji.name === "playstation"){
                     gamingAdd.add(teamplaystation);
+                    console.log("-\n" + user.username + " added playstation team role");
                 }
                 if(reaction.emoji.name === "nintendo_64_controller"){
                     gamingAdd.add(teamnintendo);
+                    console.log("-\n" + user.username + " added nintendo team role");
                 }
             }
             else{
                 return;
             }
-            console.log("-\n" + user.username + " added a gaming section");
         });
 
         cayde.on("messageReactionRemove", async (reaction, user) =>{
@@ -114,33 +121,40 @@ module.exports = {
             if(reaction.message.channel.id == gaming){
                 if(reaction.emoji.name === mobileEmoji){
                     gamingRemove.remove(mobile);
+                    console.log("-\n" + user.username + " removed mobile gaming role");
                 }
                 if(reaction.emoji.name === consolesEmoji){
                     gamingRemove.remove(consoles);
+                    console.log("-\n" + user.username + " removed console gaming role");
                 }
                 if(reaction.emoji.name === "oculus"){
                     gamingRemove.remove(VR);
+                    console.log("-\n" + user.username + " removed VR gaming role");
                 }
                 if(reaction.emoji.name === PCEmoji){
                     gamingRemove.remove(PC);
+                    console.log("-\n" + user.username + " removed PC gaming role");
                 }
                 if(reaction.emoji.name === "adobe_flash"){
                     gamingRemove.remove(flash);
+                    console.log("-\n" + user.username + " removed flash gaming role");
                 }
                 if(reaction.emoji.name === "xbox"){
                     gamingRemove.remove(teamxbox);
+                    console.log("-\n" + user.username + " removed xbox team role");
                 }
                 if(reaction.emoji.name === "playstation"){
                     gamingRemove.remove(teamplaystation);
+                    console.log("-\n" + user.username + " removed playstation team role");
                 }
                 if(reaction.emoji.name === "nintendo_64_controller"){
                     gamingRemove.remove(teamnintendo);
+                    console.log("-\n" + user.username + " removed nintendo team role");
                 }
             }
             else{
                 return;
             }
-            console.log("-\n" + user.username + " removed a gaming section");
         });
     }
 }
