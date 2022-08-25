@@ -19,7 +19,8 @@ module.exports = {
         const engr065 = msg.guild.roles.cache.find(role => role.name === "ENGR065");
         const engr191 = msg.guild.roles.cache.find(role => role.name === "ENGR191");
 
-        const cse015 = msg.guild.roles.cache.find(role => role.name === "CSE015"); 
+        const cse015 = msg.guild.roles.cache.find(role => role.name === "CSE015");
+        const cse019 = msg.guild.roles.cache.find(role => role.name === "CSE019");
         const cse022 = msg.guild.roles.cache.find(role => role.name === "CSE022");
         const cse024 = msg.guild.roles.cache.find(role => role.name === "CSE024");
         const cse030 = msg.guild.roles.cache.find(role => role.name === "CSE030");
@@ -61,6 +62,7 @@ module.exports = {
         const engr191Emoji = "🧑‍🏫";
 
         const cse015Emoji = "👶";
+        const cse019Emoji = "🤒";
         const cse022Emoji = "🧒";
         const cse024Emoji = "👧";
         const cse030Emoji = "👨";
@@ -114,6 +116,7 @@ module.exports = {
         + "**Required Computer Science Classes:**\n"
             + `${cse015Emoji} for CSE015: Discrete Mathematics\n`
             + `${cse022Emoji} for CSE022: Intro to Programming\n`
+            + `${cse019Emoji} for CSE022: Introduction to Computing\n`
             + `${cse024Emoji} for CSE024: Advanced Programming\n`
             + `${cse030Emoji} for CSE030: Data Structures\n`
             + `${cse031Emoji} for CSE031: Computer Organization & Assemply Language\n`
@@ -148,6 +151,7 @@ module.exports = {
         let msgEmbed = await classes.send(embed);
         msgEmbed.react(math021Emoji);
         msgEmbed.react(math022Emoji);
+        msgEmbed.react(math019Emoji);
         msgEmbed.react(math023Emoji);
         msgEmbed.react(math024Emoji);
         msgEmbed.react(math032Emoji);
