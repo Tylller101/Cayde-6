@@ -131,8 +131,8 @@ module.exports = {
 
         + "**Required Computer Science Classes:**\n"
             + `${cse015Emoji} for CSE015: Discrete Mathematics\n`
+            + `${cse019Emoji} for CSE019: Introduction to Computing\n`
             + `${cse022Emoji} for CSE022: Intro to Programming\n`
-            + `${cse019Emoji} for CSE022: Introduction to Computing\n`
             + `${cse024Emoji} for CSE024: Advanced Programming\n`
             + `${cse030Emoji} for CSE030: Data Structures\n`
             + `${cse031Emoji} for CSE031: Computer Organization & Assemply Language\n`
@@ -184,7 +184,6 @@ module.exports = {
         let msgEmbed = await classes.send(embed);
         msgEmbed.react(math021Emoji);
         msgEmbed.react(math022Emoji);
-        msgEmbed.react(math019Emoji);
         msgEmbed.react(math023Emoji);
         msgEmbed.react(math024Emoji);
         msgEmbed.react(math032Emoji);
@@ -199,6 +198,7 @@ module.exports = {
         msgEmbed.react(engr191Emoji);
 
         msgEmbed.react(cse015Emoji);
+        msgEmbed.react(cse019Emoji);
         msgEmbed.react(cse022Emoji);
         msgEmbed.react(cse024Emoji);
         msgEmbed.react(cse030Emoji);
@@ -300,6 +300,10 @@ module.exports = {
                 if(reaction.emoji.name === cse015Emoji){
                     classAdd.add(cse015);
                     console.log("-\n" + user.username + " added cse015");
+                }
+                if(reaction.emoji.name === cse019Emoji){
+                    classAdd.add(cse019);
+                    console.log("-\n" + user.username + " added cse019");
                 }
                 if(reaction.emoji.name === cse022Emoji){
                     classAdd.add(cse022);
@@ -493,6 +497,10 @@ module.exports = {
                 if(reaction.emoji.name === cse015Emoji){
                     classRemove.remove(cse015);
                     console.log("-\n" + user.username + " removed cse015");
+                }
+                if(reaction.emoji.name === cse019Emoji){
+                    classRemove.remove(cse019);
+                    console.log("-\n" + user.username + " removed cse019");
                 }
                 if(reaction.emoji.name === cse022Emoji){
                     classRemove.remove(cse022);
