@@ -97,6 +97,10 @@ cayde.on("message", msg =>{ //detects command messages
                 cayde.BotFeatures.get("addgaming").execute(msg, Discord, cayde);
                 msg.delete();
             }
+            if(BotCommand === "timeout"){
+                cayde.BotFeatures.get("timeout").execute(msg, commandChannel,cayde);
+                msg.delete();
+            }
         }
     }
 });
