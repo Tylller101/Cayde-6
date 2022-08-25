@@ -38,6 +38,8 @@ module.exports = {
         const cse162 = msg.guild.roles.cache.find(role => role.name === "CSE162");
         const cse165 = msg.guild.roles.cache.find(role => role.name === "CSE165");
         const cse168 = msg.guild.roles.cache.find(role => role.name === "CSE168");
+        const cse170 = msg.guild.roles.cache.find(role => role.name === "CSE170");
+        const cse171 = msg.guild.roles.cache.find(role => role.name === "CSE171");
         const cse173 = msg.guild.roles.cache.find(role => role.name === "CSE173");
         const cse175 = msg.guild.roles.cache.find(role => role.name === "CSE175");
         const cse176 = msg.guild.roles.cache.find(role => role.name === "CSE176");
@@ -45,6 +47,12 @@ module.exports = {
         const cse178 = msg.guild.roles.cache.find(role => role.name === "CSE178");
         const cse179 = msg.guild.roles.cache.find(role => role.name === "CSE179");
         const cse185 = msg.guild.roles.cache.find(role => role.name === "CSE185");
+
+        const engr120 = msg.guild.roles.cache.find(role => role.name === "ENGR120");
+        const engr151 = msg.guild.roles.cache.find(role => role.name === "ENGR151");
+        const engr155 = msg.guild.roles.cache.find(role => role.name === "ENGR155");
+        const engr170 = msg.guild.roles.cache.find(role => role.name === "ENGR170");
+        const engr180 = msg.guild.roles.cache.find(role => role.name === "ENGR180");
 
         const math021Emoji = "🇲";
         const math022Emoji = "🇦";
@@ -80,6 +88,8 @@ module.exports = {
         const cse162Emoji = "📱";
         const cse165Emoji = "💯";
         const cse168Emoji = "🛰️";
+        const cse170Emoji = "🖼️";
+        const cse171Emoji = "🕹️";
         const cse173Emoji = "🧠";
         const cse175Emoji = "📜";
         const cse176Emoji = "🖨️";
@@ -87,6 +97,12 @@ module.exports = {
         const cse178Emoji = "👮";
         const cse179Emoji = "⛓️";
         const cse185Emoji = "👁️";
+
+        const engr120Emoji = "🌊";
+        const engr151Emoji = "🦍";
+        const engr155Emoji = "💰";
+        const engr170Emoji = "🔬";
+        const engr180Emoji = "🏔️";
 
         let embed = new Discord.MessageEmbed()
         .setColor("#000000")
@@ -140,6 +156,8 @@ module.exports = {
             + `${cse162Emoji} for CSE162: Mobile Computing\n`
             + `${cse165Emoji} for CSE165: Introduction to Object Oriented Programming\n`
             + `${cse168Emoji} for CSE168: Distributed Software Systems\n`
+            + `${cse170Emoji} for CSE170: Computer Graphics\n`
+            + `${cse171Emoji} for CSE171: Game programing\n`
             + `${cse173Emoji} for CSE173: Computational Cognitive Neuroscience\n`
             + `${cse175Emoji} for CSE175: Introduction to Artificial Intelligence\n`
             + `${cse176Emoji} for CSE176: Introduction to Machine Learning\n`
@@ -147,6 +165,21 @@ module.exports = {
             + `${cse178Emoji} for CSE178: Computers & Networks Security\n`
             + `${cse179Emoji} for CSE179: Introduction to Parallel Computing\n`
             + `${cse185Emoji} for CSE185: Introduction to Computer Vision`);
+        
+        let embed3 = new Discord.MessageEmbed()
+        .setColor("#000000")
+        .setTitle("Choose your classes")
+        .setDescription("Choose classes you are taking, have taken, or plan on taking "
+        + "and would like to view and interact with on the server.\n\n"
+
+        +"**Popular Engineering Classes:**\n"
+            + `${engr120Emoji} for ENGR120: Fluid Mechanics\n`
+            + `${engr151Emoji} for ENGR151: Strength of Materials\n`
+            + `${engr155Emoji} for ENGR155: Engineering Economic Analysis\n`
+            + `${engr170Emoji} for ENGR170: Introduction to Electron Microscopy\n`
+            + `${engr180Emoji} for ENGR180: Spatial Analysis & Modeling\n`
+
+        );
 
         let msgEmbed = await classes.send(embed);
         msgEmbed.react(math021Emoji);
@@ -185,6 +218,8 @@ module.exports = {
         msgEmbed2.react(cse162Emoji);
         msgEmbed2.react(cse165Emoji);
         msgEmbed2.react(cse168Emoji);
+        msgEmbed2.react(cse170Emoji);
+        msgEmbed2.react(cse171Emoji);
         msgEmbed2.react(cse173Emoji);
         msgEmbed2.react(cse175Emoji);
         msgEmbed2.react(cse176Emoji);
@@ -193,6 +228,13 @@ module.exports = {
         msgEmbed2.react(cse179Emoji);
         msgEmbed2.react(cse185Emoji);
 
+        let msgEmbed3 = await classes.send(embed3);
+
+        msgEmbed3.react(engr120Emoji);
+        msgEmbed3.react(engr151Emoji);
+        msgEmbed3.react(engr155Emoji);
+        msgEmbed3.react(engr170Emoji);
+        msgEmbed3.react(engr180Emoji);
 
         cayde.on("messageReactionAdd", async (reaction, user) =>{
             if(reaction.message.partial && reaction.message.channel.id == classes){
@@ -324,6 +366,14 @@ module.exports = {
                     classAdd.add(cse168);
                     console.log("-\n" + user.username + " added cse168");
                 }
+                if(reaction.emoji.name === cse170Emoji){
+                    classAdd.add(cse170);
+                    console.log("-\n" + user.username + " added cse170");
+                }
+                if(reaction.emoji.name === cse171Emoji){
+                    classAdd.add(cse171);
+                    console.log("-\n" + user.username + " added cse171");
+                }
                 if(reaction.emoji.name === cse173Emoji){
                     classAdd.add(cse173);
                     console.log("-\n" + user.username + " added cse173");
@@ -351,6 +401,27 @@ module.exports = {
                 if(reaction.emoji.name === cse185Emoji){
                     classAdd.add(cse185);
                     console.log("-\n" + user.username + " added cse185");
+                }
+
+                if(reaction.emoji.name === engr120Emoji){
+                    classAdd.add(engr120);
+                    console.log("-\n" + user.username + " added engr120");
+                }
+                if(reaction.emoji.name === engr151Emoji){
+                    classAdd.add(engr151);
+                    console.log("-\n" + user.username + " added engr151");
+                }
+                if(reaction.emoji.name === engr155Emoji){
+                    classAdd.add(engr155);
+                    console.log("-\n" + user.username + " added engr155");
+                }
+                if(reaction.emoji.name === engr170Emoji){
+                    classAdd.add(engr170);
+                    console.log("-\n" + user.username + " added engr170");
+                }
+                if(reaction.emoji.name === engr180Emoji){
+                    classAdd.add(engr180);
+                    console.log("-\n" + user.username + " added engr180");
                 }
             }
             else{
@@ -488,6 +559,14 @@ module.exports = {
                     classRemove.remove(cse168);
                     console.log("-\n" + user.username + " removed cse168");
                 }
+                if(reaction.emoji.name === cse170Emoji){
+                    classRemove.remove(cse170);
+                    console.log("-\n" + user.username + " removed cse170");
+                }
+                if(reaction.emoji.name === cse171Emoji){
+                    classRemove.remove(cse171);
+                    console.log("-\n" + user.username + " removed cse171");
+                }
                 if(reaction.emoji.name === cse173Emoji){
                     classRemove.remove(cse173);
                     console.log("-\n" + user.username + " removed cse173");
@@ -515,6 +594,27 @@ module.exports = {
                 if(reaction.emoji.name === cse185Emoji){
                     classRemove.remove(cse185);
                     console.log("-\n" + user.username + " removed cse185");
+                }
+
+                if(reaction.emoji.name === engr120Emoji){
+                    classRemove.remove(engr120);
+                    console.log("-\n" + user.username + " removed engr120");
+                }
+                if(reaction.emoji.name === engr151Emoji){
+                    classRemove.remove(engr151);
+                    console.log("-\n" + user.username + " removed engr151");
+                }
+                if(reaction.emoji.name === engr155Emoji){
+                    classRemove.remove(engr155);
+                    console.log("-\n" + user.username + " removed engr155");
+                }
+                if(reaction.emoji.name === engr170Emoji){
+                    classRemove.remove(engr170);
+                    console.log("-\n" + user.username + " removed engr170");
+                }
+                if(reaction.emoji.name === engr180Emoji){
+                    classRemove.remove(engr180);
+                    console.log("-\n" + user.username + " removed engr180");
                 }
             }
             else{
