@@ -48,6 +48,7 @@ module.exports = {
         const cse179 = msg.guild.roles.cache.find(role => role.name === "CSE179");
         const cse185 = msg.guild.roles.cache.find(role => role.name === "CSE185");
 
+        const engr057 = msg.guild.roles.cache.find(role => role.name === "ENGR057");
         const engr120 = msg.guild.roles.cache.find(role => role.name === "ENGR120");
         const engr151 = msg.guild.roles.cache.find(role => role.name === "ENGR151");
         const engr155 = msg.guild.roles.cache.find(role => role.name === "ENGR155");
@@ -98,6 +99,7 @@ module.exports = {
         const cse179Emoji = "⛓️";
         const cse185Emoji = "👁️";
 
+        const engr057Emoji = "💥";
         const engr120Emoji = "🌊";
         const engr151Emoji = "🦍";
         const engr155Emoji = "💰";
@@ -173,6 +175,7 @@ module.exports = {
         + "and would like to view and interact with on the server.\n\n"
 
         +"**Popular Engineering Classes:**\n"
+            + `${engr057Emoji} for ENGR057: Statics and Dynamics\n`
             + `${engr120Emoji} for ENGR120: Fluid Mechanics\n`
             + `${engr151Emoji} for ENGR151: Strength of Materials\n`
             + `${engr155Emoji} for ENGR155: Engineering Economic Analysis\n`
@@ -230,6 +233,7 @@ module.exports = {
 
         let msgEmbed3 = await classes.send(embed3);
 
+        msgEmbed3.react(engr057Emoji);
         msgEmbed3.react(engr120Emoji);
         msgEmbed3.react(engr151Emoji);
         msgEmbed3.react(engr155Emoji);
@@ -407,6 +411,10 @@ module.exports = {
                     console.log("-\n" + user.username + " added cse185");
                 }
 
+                if(reaction.emoji.name === engr057Emoji){
+                    classAdd.add(engr057);
+                    console.log("-\n" + user.username + " added engr057");
+                }
                 if(reaction.emoji.name === engr120Emoji){
                     classAdd.add(engr120);
                     console.log("-\n" + user.username + " added engr120");
@@ -604,6 +612,10 @@ module.exports = {
                     console.log("-\n" + user.username + " removed cse185");
                 }
 
+                if(reaction.emoji.name === engr057Emoji){
+                    classRemove.remove(engr057);
+                    console.log("-\n" + user.username + " removed engr057");
+                }
                 if(reaction.emoji.name === engr120Emoji){
                     classRemove.remove(engr120);
                     console.log("-\n" + user.username + " removed engr120");
