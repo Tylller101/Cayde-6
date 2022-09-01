@@ -19,6 +19,7 @@ module.exports = {
         const engr065 = msg.guild.roles.cache.find(role => role.name === "ENGR065");
         const engr191 = msg.guild.roles.cache.find(role => role.name === "ENGR191");
 
+        const cse005 = msg.guild.roles.cache.find(role => role.name === "CSE005");
         const cse015 = msg.guild.roles.cache.find(role => role.name === "CSE015");
         const cse019 = msg.guild.roles.cache.find(role => role.name === "CSE019");
         const cse022 = msg.guild.roles.cache.find(role => role.name === "CSE022");
@@ -70,6 +71,7 @@ module.exports = {
         const engr065Emoji = "🦾";
         const engr191Emoji = "🧑‍🏫";
 
+        const cse005Emoji = msg.guild.emojis.cache.find(emoji => emoji.name === "powershell");
         const cse015Emoji = "👶";
         const cse019Emoji = "🤒";
         const cse022Emoji = "🧒";
@@ -132,6 +134,7 @@ module.exports = {
             + `${engr191Emoji} for ENGR191: Professional Seminar\n\n`
 
         + "**Required Computer Science Classes:**\n"
+            + `${cse005Emoji} for CSE005: Introduction to Computer Applications\n`
             + `${cse015Emoji} for CSE015: Discrete Mathematics\n`
             + `${cse019Emoji} for CSE019: Introduction to Computing\n`
             + `${cse022Emoji} for CSE022: Intro to Programming\n`
@@ -200,6 +203,7 @@ module.exports = {
         msgEmbed.react(engr065Emoji);
         msgEmbed.react(engr191Emoji);
 
+        msgEmbed.react(cse005Emoji);
         msgEmbed.react(cse015Emoji);
         msgEmbed.react(cse019Emoji);
         msgEmbed.react(cse022Emoji);
@@ -301,6 +305,10 @@ module.exports = {
                     console.log("-\n" + user.username + " added engr191");
                 }
 
+                if(reaction.emoji.name === cse005Emoji){
+                    classAdd.add(cse005);
+                    console.log("-\n" + user.username + " added cse005");
+                }
                 if(reaction.emoji.name === cse015Emoji){
                     classAdd.add(cse015);
                     console.log("-\n" + user.username + " added cse015");
@@ -502,6 +510,10 @@ module.exports = {
                     console.log("-\n" + user.username + " removed engr191");
                 }
 
+                if(reaction.emoji.name === cse005Emoji){
+                    classRemove.remove(cse005);
+                    console.log("-\n" + user.username + " removed cse005");
+                }
                 if(reaction.emoji.name === cse015Emoji){
                     classRemove.remove(cse015);
                     console.log("-\n" + user.username + " removed cse015");
