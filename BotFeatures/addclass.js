@@ -71,7 +71,7 @@ module.exports = {
         const engr065Emoji = "🦾";
         const engr191Emoji = "🧑‍🏫";
 
-        const cse005Emoji = msg.guild.emojis.cache.find(emoji => emoji.name === "powershell");
+        const cse005Emoji = "😋";
         const cse015Emoji = "👶";
         const cse019Emoji = "🤒";
         const cse022Emoji = "🧒";
