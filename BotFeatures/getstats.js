@@ -16,6 +16,7 @@ module.exports = {
 
         if(msg.author.id in guildstats === false){
             msg.author.send("Sorry but it appears you have not participated on the server and therefore have no stats to view.");
+            console.log("\n" + "they have no stats to show cus they haven't been participating");
             return;
         }
         else{
@@ -26,6 +27,8 @@ module.exports = {
                 + "You have " + "**" + userstats.xp + "**" + "XP\n"
                 + "You need " + "**" + xpToNextLevel + "**" + "XP to get to level " + (userstats.level + 1) + "\n"
                 + "And you have **" + userstats.playTokens + "** Tokens to use in games");
+
+            console.log("\n" + "they recieved there stats summary");
         }
     }
 }

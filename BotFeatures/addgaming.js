@@ -70,35 +70,35 @@ module.exports = {
             if(reaction.message.channel.id == gaming){
                 if(reaction.emoji.name === mobileEmoji){
                     gamingAdd.add(mobile);
-                    console.log("-\n" + user.username + " added mobile gaming role");
+                    console.log("-\n" + user.username + " added the mobile gaming role");
                 }
                 if(reaction.emoji.name === consolesEmoji){
                     gamingAdd.add(consoles);
-                    console.log("-\n" + user.username + " added console gaming role");
+                    console.log("-\n" + user.username + " added the console gaming role");
                 }
                 if(reaction.emoji.name === "oculus"){
                     gamingAdd.add(VR);
-                    console.log("-\n" + user.username + " added VR gaming role");
+                    console.log("-\n" + user.username + " added the VR gaming role");
                 }
                 if(reaction.emoji.name === PCEmoji){
                     gamingAdd.add(PC);
-                    console.log("-\n" + user.username + " added PC gaming role");
+                    console.log("-\n" + user.username + " added the PC gaming role");
                 }
                 if(reaction.emoji.name === "adobe_flash"){
                     gamingAdd.add(flash);
-                    console.log("-\n" + user.username + " added flash gaming role");
+                    console.log("-\n" + user.username + " added the flash gaming role");
                 }
                 if(reaction.emoji.name === "xbox"){
                     gamingAdd.add(teamxbox);
-                    console.log("-\n" + user.username + " added xbox team role");
+                    console.log("-\n" + user.username + " added the xbox team role");
                 }
                 if(reaction.emoji.name === "playstation"){
                     gamingAdd.add(teamplaystation);
-                    console.log("-\n" + user.username + " added playstation team role");
+                    console.log("-\n" + user.username + " added the playstation team role");
                 }
                 if(reaction.emoji.name === "nintendo_64_controller"){
                     gamingAdd.add(teamnintendo);
-                    console.log("-\n" + user.username + " added nintendo team role");
+                    console.log("-\n" + user.username + " added the nintendo team role");
                 }
             }
             else{
@@ -121,35 +121,35 @@ module.exports = {
             if(reaction.message.channel.id == gaming){
                 if(reaction.emoji.name === mobileEmoji){
                     gamingRemove.remove(mobile);
-                    console.log("-\n" + user.username + " removed mobile gaming role");
+                    console.log("-\n" + user.username + " removed the mobile gaming role");
                 }
                 if(reaction.emoji.name === consolesEmoji){
                     gamingRemove.remove(consoles);
-                    console.log("-\n" + user.username + " removed console gaming role");
+                    console.log("-\n" + user.username + " removed the console gaming role");
                 }
                 if(reaction.emoji.name === "oculus"){
                     gamingRemove.remove(VR);
-                    console.log("-\n" + user.username + " removed VR gaming role");
+                    console.log("-\n" + user.username + " removed the VR gaming role");
                 }
                 if(reaction.emoji.name === PCEmoji){
                     gamingRemove.remove(PC);
-                    console.log("-\n" + user.username + " removed PC gaming role");
+                    console.log("-\n" + user.username + " removed the PC gaming role");
                 }
                 if(reaction.emoji.name === "adobe_flash"){
                     gamingRemove.remove(flash);
-                    console.log("-\n" + user.username + " removed flash gaming role");
+                    console.log("-\n" + user.username + " removed the flash gaming role");
                 }
                 if(reaction.emoji.name === "xbox"){
                     gamingRemove.remove(teamxbox);
-                    console.log("-\n" + user.username + " removed xbox team role");
+                    console.log("-\n" + user.username + " removed the xbox team role");
                 }
                 if(reaction.emoji.name === "playstation"){
                     gamingRemove.remove(teamplaystation);
-                    console.log("-\n" + user.username + " removed playstation team role");
+                    console.log("-\n" + user.username + " removed the playstation team role");
                 }
                 if(reaction.emoji.name === "nintendo_64_controller"){
                     gamingRemove.remove(teamnintendo);
-                    console.log("-\n" + user.username + " removed nintendo team role");
+                    console.log("-\n" + user.username + " removed the nintendo team role");
                 }
             }
             else{
