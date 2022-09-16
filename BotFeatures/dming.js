@@ -4,17 +4,21 @@ module.exports = {
     async execute(msg, fs, guild, jsonfile, features, games){
         const greeting = msg.content.toLowerCase();
         const reply = msg.author;
+            console.log("-\n" + msg.author.username + " messaged me");
            
             if(greeting === "hi" || greeting === "hello"){
                 reply.send("Hello! Im Cayde-6 the Official bot of the CSE & Gaming server.");
+                console.log("-\n" + "they said hi");
                 return;
             }
             if(greeting === "ping" || greeting === "ping!"){
                 reply.send("Pong!");
+                console.log("-\n" + "they they pinged i ponged");
                 return;
             }
             if(greeting === "pong" || greeting === "pong!"){
                 reply.send("Ping!");
+                console.log("-\n" + "they ponged i pinged");
                 return;
             }
 
@@ -28,10 +32,12 @@ module.exports = {
                     + "Facilitate PvP, PvE or PvPvE games(if you dont know what those mean just type it in the chat)\n"
                     + "I can \"Draw a card\" or \"Roll a die\"\n"
                     + "Inform users of there server stats or game stats(if applicable)");
+                    console.log("-\n" + "they wated to know what i do for the server");
                     return;
             }
             if(greeting === "pvp"){
                 reply.send("PvP stands for Player Vs. Player.");
+                console.log("-\n" + "they asked what pvp stood for");
                 return;
             }
             if(greeting === "pve"){
