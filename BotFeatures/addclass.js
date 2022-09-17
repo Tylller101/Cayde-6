@@ -260,188 +260,323 @@ module.exports = {
                 if(reaction.emoji.name === math021Emoji){
                     classAdd.add(math021);
                     console.log("-\n" + user.username + " added math021");
+                    save += "-\n" + user.username + " added math021 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === math022Emoji){
                     classAdd.add(math022);
                     console.log("-\n" + user.username + " added math022");
+                    save += "-\n" + user.username + " added math022 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === math023Emoji){
                     classAdd.add(math023);
                     console.log("-\n" + user.username + " added math023");
+                    save += "-\n" + user.username + " added math023 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === math024Emoji){
                     classAdd.add(math024);
                     console.log("-\n" + user.username + " added math024");
+                    save += "-\n" + user.username + " added math024 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === math032Emoji){
                     classAdd.add(math032);
                     console.log("-\n" + user.username + " added math032");
+                    save += "-\n" + user.username + " added math032 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
 
                 if(reaction.emoji.name === math131Emoji){
                     classAdd.add(math131);
                     console.log("-\n" + user.username + " added math131");
+                    save += "-\n" + user.username + " added math131 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === math141Emoji){
                     classAdd.add(math141);
                     console.log("-\n" + user.username + " added math141");
+                    save += "-\n" + user.username + " added math141 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
 
                 if(reaction.emoji.name === phys008Emoji){
                     classAdd.add(phys008);
                     console.log("-\n" + user.username + " added phys008");
+                    save += "-\n" + user.username + " added phys008 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === phys009Emoji){
                     classAdd.add(phys009);
                     console.log("-\n" + user.username + " added phys009");
+                    save += "-\n" + user.username + " added phys009 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
 
                 if(reaction.emoji.name === engr065Emoji){
                     classAdd.add(engr065);
                     console.log("-\n" + user.username + " added engr065");
+                    save += "-\n" + user.username + " added engr065 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === engr191Emoji){
                     classAdd.add(engr191);
                     console.log("-\n" + user.username + " added engr191");
+                    save += "-\n" + user.username + " added engr191 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
 
                 if(reaction.emoji.name === cse005Emoji){
                     classAdd.add(cse005);
                     console.log("-\n" + user.username + " added cse005");
+                    save += "-\n" + user.username + " added cse005 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse015Emoji){
                     classAdd.add(cse015);
                     console.log("-\n" + user.username + " added cse015");
+                    save += "-\n" + user.username + " added cse015 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse019Emoji){
                     classAdd.add(cse019);
                     console.log("-\n" + user.username + " added cse019");
+                    save += "-\n" + user.username + " added cse019 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse022Emoji){
                     classAdd.add(cse022);
                     console.log("-\n" + user.username + " added cse022");
+                    save += "-\n" + user.username + " added cse022 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse024Emoji){
                     classAdd.add(cse024);
                     console.log("-\n" + user.username + " added cse024");
+                    save += "-\n" + user.username + " added cse024 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse030Emoji){
                     classAdd.add(cse030);
                     console.log("-\n" + user.username + " added cse030");
+                    save += "-\n" + user.username + " added cse030 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse031Emoji){
                     classAdd.add(cse031);
                     console.log("-\n" + user.username + " added cse031");
+                    save += "-\n" + user.username + " added cse031 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse100Emoji){
                     classAdd.add(cse100);
                     console.log("-\n" + user.username + " added cse100");
+                    save += "-\n" + user.username + " added cse100 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse120Emoji){
                     classAdd.add(cse120);
                     console.log("-\n" + user.username + " added cse120");
+                    save += "-\n" + user.username + " added cse120 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
 
                 if(reaction.emoji.name === cse106Emoji){
                     classAdd.add(cse106);
                     console.log("-\n" + user.username + " added cse106");
+                    save += "-\n" + user.username + " added cse106 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse107Emoji){
                     classAdd.add(cse107);
                     console.log("-\n" + user.username + " added cse107");
+                    save += "-\n" + user.username + " added cse107 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse111Emoji){
                     classAdd.add(cse111);
                     console.log("-\n" + user.username + " added cse111");
+                    save += "-\n" + user.username + " added cse111 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse140Emoji){
                     classAdd.add(cse140);
                     console.log("-\n" + user.username + " added cse140");
+                    save += "-\n" + user.username + " added cse140 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse150Emoji){
                     classAdd.add(cse150);
                     console.log("-\n" + user.username + " added cse150");
+                    save += "-\n" + user.username + " added cse150 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse155Emoji){
                     classAdd.add(cse155);
                     console.log("-\n" + user.username + " added cse155");
+                    save += "-\n" + user.username + " added cse155 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse160Emoji){
                     classAdd.add(cse160);
                     console.log("-\n" + user.username + " added cse160");
+                    save += "-\n" + user.username + " added cse160 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse162Emoji){
                     classAdd.add(cse162);
                     console.log("-\n" + user.username + " added cse162");
+                    save += "-\n" + user.username + " added cse162 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse165Emoji){
                     classAdd.add(cse165);
                     console.log("-\n" + user.username + " added cse165");
+                    save += "-\n" + user.username + " added cse165 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse168Emoji){
                     classAdd.add(cse168);
                     console.log("-\n" + user.username + " added cse168");
+                    save += "-\n" + user.username + " added cse168 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse170Emoji){
                     classAdd.add(cse170);
                     console.log("-\n" + user.username + " added cse170");
+                    save += "-\n" + user.username + " added cse170 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse171Emoji){
                     classAdd.add(cse171);
                     console.log("-\n" + user.username + " added cse171");
+                    save += "-\n" + user.username + " added cse171 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse173Emoji){
                     classAdd.add(cse173);
                     console.log("-\n" + user.username + " added cse173");
+                    save += "-\n" + user.username + " added cse173 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse175Emoji){
                     classAdd.add(cse175);
                     console.log("-\n" + user.username + " added cse175");
+                    save += "-\n" + user.username + " added cse175 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse176Emoji){
                     classAdd.add(cse176);
                     console.log("-\n" + user.username + " added cse176");
+                    save += "-\n" + user.username + " added cse176 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse177Emoji){
                     classAdd.add(cse177);
                     console.log("-\n" + user.username + " added cse177");
+                    save += "-\n" + user.username + " added cse177 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse178Emoji){
                     classAdd.add(cse178);
                     console.log("-\n" + user.username + " added cse178");
+                    save += "-\n" + user.username + " added cse178 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse179Emoji){
                     classAdd.add(cse179);
                     console.log("-\n" + user.username + " added cse179");
+                    save += "-\n" + user.username + " added cse179 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse185Emoji){
                     classAdd.add(cse185);
                     console.log("-\n" + user.username + " added cse185");
+                    save += "-\n" + user.username + " added cse185 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
 
                 if(reaction.emoji.name === engr057Emoji){
                     classAdd.add(engr057);
                     console.log("-\n" + user.username + " added engr057");
+                    save += "-\n" + user.username + " added engr057 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === engr120Emoji){
                     classAdd.add(engr120);
                     console.log("-\n" + user.username + " added engr120");
+                    save += "-\n" + user.username + " added engr120 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === engr151Emoji){
                     classAdd.add(engr151);
                     console.log("-\n" + user.username + " added engr151");
+                    save += "-\n" + user.username + " added engr151 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === engr155Emoji){
                     classAdd.add(engr155);
                     console.log("-\n" + user.username + " added engr155");
+                    save += "-\n" + user.username + " added engr155 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === engr170Emoji){
                     classAdd.add(engr170);
                     console.log("-\n" + user.username + " added engr170");
+                    save += "-\n" + user.username + " added engr170 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === engr180Emoji){
                     classAdd.add(engr180);
                     console.log("-\n" + user.username + " added engr180");
+                    save += "-\n" + user.username + " added engr180 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
             }
             else{
@@ -465,188 +600,323 @@ module.exports = {
                 if(reaction.emoji.name === math021Emoji){
                     classRemove.remove(math021);
                     console.log("-\n" + user.username + " removed math021");
+                    save += "-\n" + user.username + " removed math021 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === math022Emoji){
                     classRemove.remove(math022);
                     console.log("-\n" + user.username + " removed math022");
+                    save += "-\n" + user.username + " removed math022 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === math023Emoji){
                     classRemove.remove(math023);
                     console.log("-\n" + user.username + " removed math023");
+                    save += "-\n" + user.username + " removed math023 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === math024Emoji){
                     classRemove.remove(math024);
                     console.log("-\n" + user.username + " removed math024");
+                    save += "-\n" + user.username + " removed math024 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === math032Emoji){
                     classRemove.remove(math032);
                     console.log("-\n" + user.username + " removed math032");
+                    save += "-\n" + user.username + " removed math032 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
 
                 if(reaction.emoji.name === math131Emoji){
                     classRemove.remove(math131);
                     console.log("-\n" + user.username + " removed math131");
+                    save += "-\n" + user.username + " removed math131 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === math141Emoji){
                     classRemove.remove(math141);
                     console.log("-\n" + user.username + " removed math141");
+                    save += "-\n" + user.username + " removed math141 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
 
                 if(reaction.emoji.name === phys008Emoji){
                     classRemove.remove(phys008);
                     console.log("-\n" + user.username + " removed phys008");
+                    save += "-\n" + user.username + " removed phys008 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === phys009Emoji){
                     classRemove.remove(phys009);
                     console.log("-\n" + user.username + " removed phys009");
+                    save += "-\n" + user.username + " removed phys009 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
 
                 if(reaction.emoji.name === engr065Emoji){
                     classRemove.remove(engr065);
                     console.log("-\n" + user.username + " removed engr065");
+                    save += "-\n" + user.username + " removed engr065 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === engr191Emoji){
                     classRemove.remove(engr191);
                     console.log("-\n" + user.username + " removed engr191");
+                    save += "-\n" + user.username + " removed engr191 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
 
                 if(reaction.emoji.name === cse005Emoji){
                     classRemove.remove(cse005);
                     console.log("-\n" + user.username + " removed cse005");
+                    save += "-\n" + user.username + " removed cse005 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse015Emoji){
                     classRemove.remove(cse015);
                     console.log("-\n" + user.username + " removed cse015");
+                    save += "-\n" + user.username + " removed cse015 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse019Emoji){
                     classRemove.remove(cse019);
                     console.log("-\n" + user.username + " removed cse019");
+                    save += "-\n" + user.username + " removed cse019 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse022Emoji){
                     classRemove.remove(cse022);
                     console.log("-\n" + user.username + " removed cse022");
+                    save += "-\n" + user.username + " removed cse022 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse024Emoji){
                     classRemove.remove(cse024);
                     console.log("-\n" + user.username + " removed cse024");
+                    save += "-\n" + user.username + " removed cse024 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse030Emoji){
                     classRemove.remove(cse030);
                     console.log("-\n" + user.username + " removed cse030");
+                    save += "-\n" + user.username + " removed cse030 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse031Emoji){
                     classRemove.remove(cse031);
                     console.log("-\n" + user.username + " removed cse031");
+                    save += "-\n" + user.username + " removed cse031 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse100Emoji){
                     classRemove.remove(cse100);
                     console.log("-\n" + user.username + " removed cse100");
+                    save += "-\n" + user.username + " removed cse100 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse120Emoji){
                     classRemove.remove(cse120);
                     console.log("-\n" + user.username + " removed cse120");
+                    save += "-\n" + user.username + " removed cse120 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 
                 if(reaction.emoji.name === cse106Emoji){
                     classRemove.remove(cse106);
                     console.log("-\n" + user.username + " removed cse106");
+                    save += "-\n" + user.username + " removed cse106 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse107Emoji){
                     classRemove.remove(cse107);
                     console.log("-\n" + user.username + " removed cse107");
+                    save += "-\n" + user.username + " removed cse107 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse111Emoji){
                     classRemove.remove(cse111);
                     console.log("-\n" + user.username + " removed cse111");
+                    save += "-\n" + user.username + " removed cse111 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse140Emoji){
                     classRemove.remove(cse140);
                     console.log("-\n" + user.username + " removed cse140");
+                    save += "-\n" + user.username + " removed cse140 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse150Emoji){
                     classRemove.remove(cse150);
                     console.log("-\n" + user.username + " removed cse150");
+                    save += "-\n" + user.username + " removed cse150 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse155Emoji){
                     classRemove.remove(cse155);
                     console.log("-\n" + user.username + " removed cse155");
+                    save += "-\n" + user.username + " removed cse155 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse160Emoji){
                     classRemove.remove(cse160);
                     console.log("-\n" + user.username + " removed cse160");
+                    save += "-\n" + user.username + " removed cse160 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse162Emoji){
                     classRemove.remove(cse162);
                     console.log("-\n" + user.username + " removed cse162");
+                    save += "-\n" + user.username + " removed cse162 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse165Emoji){
                     classRemove.remove(cse165);
                     console.log("-\n" + user.username + " removed cse165");
+                    save += "-\n" + user.username + " removed cse165 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse168Emoji){
                     classRemove.remove(cse168);
                     console.log("-\n" + user.username + " removed cse168");
+                    save += "-\n" + user.username + " removed cse168 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse170Emoji){
                     classRemove.remove(cse170);
                     console.log("-\n" + user.username + " removed cse170");
+                    save += "-\n" + user.username + " removed cse170 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse171Emoji){
                     classRemove.remove(cse171);
                     console.log("-\n" + user.username + " removed cse171");
+                    save += "-\n" + user.username + " removed cse171 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse173Emoji){
                     classRemove.remove(cse173);
                     console.log("-\n" + user.username + " removed cse173");
+                    save += "-\n" + user.username + " removed cse173 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse175Emoji){
                     classRemove.remove(cse175);
                     console.log("-\n" + user.username + " removed cse175");
+                    save += "-\n" + user.username + " removed cse175 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse176Emoji){
                     classRemove.remove(cse176);
                     console.log("-\n" + user.username + " removed cse176");
+                    save += "-\n" + user.username + " removed cse176 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse177Emoji){
                     classRemove.remove(cse177);
                     console.log("-\n" + user.username + " removed cse177");
+                    save += "-\n" + user.username + " removed cse177 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse178Emoji){
                     classRemove.remove(cse178);
                     console.log("-\n" + user.username + " removed cse178");
+                    save += "-\n" + user.username + " removed cse178 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse179Emoji){
                     classRemove.remove(cse179);
                     console.log("-\n" + user.username + " removed cse179");
+                    save += "-\n" + user.username + " removed cse179 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === cse185Emoji){
                     classRemove.remove(cse185);
                     console.log("-\n" + user.username + " removed cse185");
+                    save += "-\n" + user.username + " removed cse185 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
 
                 if(reaction.emoji.name === engr057Emoji){
                     classRemove.remove(engr057);
                     console.log("-\n" + user.username + " removed engr057");
+                    save += "-\n" + user.username + " removed engr057 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === engr120Emoji){
                     classRemove.remove(engr120);
                     console.log("-\n" + user.username + " removed engr120");
+                    save += "-\n" + user.username + " removed engr120 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === engr151Emoji){
                     classRemove.remove(engr151);
                     console.log("-\n" + user.username + " removed engr151");
+                    save += "-\n" + user.username + " removed engr151 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === engr155Emoji){
                     classRemove.remove(engr155);
                     console.log("-\n" + user.username + " removed engr155");
+                    save += "-\n" + user.username + " removed engr155 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === engr170Emoji){
                     classRemove.remove(engr170);
                     console.log("-\n" + user.username + " removed engr170");
+                    save += "-\n" + user.username + " removed engr170 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
                 if(reaction.emoji.name === engr180Emoji){
                     classRemove.remove(engr180);
                     console.log("-\n" + user.username + " removed engr180");
+                    save += "-\n" + user.username + " removed engr180 " + time() + "\n";
+                    saveToFile(fs, save, filepath);
+                    return;
                 }
             }
             else{
@@ -654,4 +924,34 @@ module.exports = {
             }
         });
     }
+}
+
+function saveToFile(fs, save, filepath){
+    fs.open(filepath, "a", function(err){
+        if(err){
+            console.log("failed to open " + filepath);
+        }
+        else{
+            fs.appendFile(filepath, save, (err) => {
+                if(err){
+                    console.log("failed to write to " + filepath);
+                }
+                else{
+                    console.log("interaction saved to " + filepath);
+                }
+            });
+        }
+    });
+};
+
+function time(){
+    var timestamp = Date.now();
+    var dateObject = new Date(timestamp);
+    var day = dateObject.getDate();
+    var month = dateObject.getMonth() + 1;
+    var year = dateObject.getFullYear();
+    var hour = dateObject.getHours();
+    var min = dateObject.getMinutes();
+    var sec = dateObject.getSeconds();
+    return (day + "/" + month + "/" + year + "  " + hour + ":" + min + ":" + sec);
 }
