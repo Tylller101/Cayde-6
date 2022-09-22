@@ -43,7 +43,7 @@ cayde.on("guildMemberAdd", newMember =>{ //when a person enters the server
         + `Please visit ${rulesChannel} and get familiar with the rules of the server.\n`
         + `Also make sure to visit ${tocChannel} to get familiar with all the server has to offer.\n`
         + `To get more familiar with Discord itself visit ${discordChannel} for tips, tricks and easter eggs.\n`
-        + `To gain access to class & gaming categories or channels go to ${classes} & ${gaming}.`); 
+        + `To gain access to classes & gaming categories or channels go to ${classes} & ${gaming}.`); 
     
     console.log("-\n" + newMember.user.username + " has joined the server.");
 });
