@@ -14,13 +14,13 @@ module.exports = {
 
         const guildstats = stats[guild];
         const filepath = "./BotStorage/BotLogs/DMLogs.txt";
-        var save = "";
+        //var save = "";
 
         if(msg.author.id in guildstats === false){
             msg.author.send("Sorry but it appears you have not participated on the server and therefore have no stats to view.");
             console.log("they have no stats to show cus they haven't been participating");
-            save += "they have no stats to show cus they haven't been participating ";
-            saveToFile(fs, save, filepath);
+            //save += "they have no stats to show cus they haven't been participating ";
+            //saveToFile(fs, save, filepath);
             return;
         }
         else{
@@ -33,8 +33,8 @@ module.exports = {
                 + "And you have **" + userstats.playTokens + "** Tokens to use in games");
 
             console.log("they recieved there stats summary");
-            save += "they recieved their stats summary\n";
-            saveToFile(fs, save, filepath);
+            //save += "they recieved their stats summary\n";
+            //saveToFile(fs, save, filepath);
         }
     }
 }

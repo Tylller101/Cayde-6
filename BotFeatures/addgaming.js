@@ -70,61 +70,61 @@ module.exports = {
 
             const gamingAdd = await reaction.message.guild.members.cache.get(user.id).roles;
             if(reaction.message.channel.id == gaming){
-                var save = "";
+                //var save = "";
                 if(reaction.emoji.name === mobileEmoji){
                     gamingAdd.add(mobile);
                     console.log("-\n" + user.username + " added the mobile gaming role at " + time());
-                    save += "-\n" + user.username + " added the mobile gaming role at " + time() + "\n";
-                    saveToFile(fs, save, filepath);
+                    //save += "-\n" + user.username + " added the mobile gaming role at " + time() + "\n";
+                    //saveToFile(fs, save, filepath);
                     return;
                 }
                 if(reaction.emoji.name === consolesEmoji){
                     gamingAdd.add(consoles);
                     console.log("-\n" + user.username + " added the console gaming role at " + time());
-                    save += "-\n" + user.username + " added the console gaming role at " + time() + "\n";
-                    saveToFile(fs, save, filepath);
+                    //save += "-\n" + user.username + " added the console gaming role at " + time() + "\n";
+                    //saveToFile(fs, save, filepath);
                     return;
                 }
                 if(reaction.emoji.name === "oculus"){
                     gamingAdd.add(VR);
                     console.log("-\n" + user.username + " added the VR gaming role at " + time());
-                    save += "-\n" + user.username + " added the VR gaming role at " + time() + "\n";
-                    saveToFile(fs, save, filepath);
+                    //save += "-\n" + user.username + " added the VR gaming role at " + time() + "\n";
+                    //saveToFile(fs, save, filepath);
                     return;
                 }
                 if(reaction.emoji.name === PCEmoji){
                     gamingAdd.add(PC);
                     console.log("-\n" + user.username + " added the PC gaming role at " + time());
-                    save += "-\n" + user.username + " added the PC gaming role at " + time() + "\n";
-                    saveToFile(fs, save, filepath);
+                    //save += "-\n" + user.username + " added the PC gaming role at " + time() + "\n";
+                    //saveToFile(fs, save, filepath);
                     return;
                 }
                 if(reaction.emoji.name === "adobe_flash"){
                     gamingAdd.add(flash);
                     console.log("-\n" + user.username + " added the flash gaming role at " + time());
-                    save += "-\n" + user.username + " added the flash gaming role at " + time() + "\n";
-                    saveToFile(fs, save, filepath);
+                    //save += "-\n" + user.username + " added the flash gaming role at " + time() + "\n";
+                    //saveToFile(fs, save, filepath);
                     return;
                 }
                 if(reaction.emoji.name === "xbox"){
                     gamingAdd.add(teamxbox);
                     console.log("-\n" + user.username + " added the xbox team role at " + time());
-                    save += "-\n" + user.username + " added the xbox team gaming role at " + time() + "\n";
-                    saveToFile(fs, save, filepath);
+                    //save += "-\n" + user.username + " added the xbox team gaming role at " + time() + "\n";
+                    //saveToFile(fs, save, filepath);
                     return;
                 }
                 if(reaction.emoji.name === "playstation"){
                     gamingAdd.add(teamplaystation);
                     console.log("-\n" + user.username + " added the playstation team role at " + time());
-                    save += "-\n" + user.username + " added the playstation team gaming role at " + time() + "\n";
-                    saveToFile(fs, save, filepath);
+                    //save += "-\n" + user.username + " added the playstation team gaming role at " + time() + "\n";
+                    //saveToFile(fs, save, filepath);
                     return;
                 }
                 if(reaction.emoji.name === "nintendo_64_controller"){
                     gamingAdd.add(teamnintendo);
                     console.log("-\n" + user.username + " added the nintendo team role at " + time());
-                    save += "-\n" + user.username + " added the nintendo team gaming role at " + time() + "\n";
-                    saveToFile(fs, save, filepath);
+                    //save += "-\n" + user.username + " added the nintendo team gaming role at " + time() + "\n";
+                    //saveToFile(fs, save, filepath);
                     return;
                 }
             }
@@ -146,61 +146,61 @@ module.exports = {
 
             const gamingRemove = await reaction.message.guild.members.cache.get(user.id).roles;
             if(reaction.message.channel.id == gaming){
-                var save = "";
+                //var save = "";
                 if(reaction.emoji.name === mobileEmoji){
                     gamingRemove.remove(mobile);
                     console.log("-\n" + user.username + " removed the mobile gaming role at " + time());
-                    save += "-\n" + user.username + " removed the mobile gaming role at " + time() + "\n";
-                    saveToFile(fs, save, filepath);
+                    //save += "-\n" + user.username + " removed the mobile gaming role at " + time() + "\n";
+                    //saveToFile(fs, save, filepath);
                     return;
                 }
                 if(reaction.emoji.name === consolesEmoji){
                     gamingRemove.remove(consoles);
                     console.log("-\n" + user.username + " removed the console gaming role at " + time());
-                    save += "-\n" + user.username + " removed the console gaming role at " + time() + "\n";
-                    saveToFile(fs, save, filepath);
+                    //save += "-\n" + user.username + " removed the console gaming role at " + time() + "\n";
+                    //saveToFile(fs, save, filepath);
                     return;
                 }
                 if(reaction.emoji.name === "oculus"){
                     gamingRemove.remove(VR);
                     console.log("-\n" + user.username + " removed the VR gaming role at " + time());
-                    save += "-\n" + user.username + " removed the VR gaming role at " + time() + "\n";
-                    saveToFile(fs, save, filepath);
+                    //save += "-\n" + user.username + " removed the VR gaming role at " + time() + "\n";
+                    //saveToFile(fs, save, filepath);
                     return;
                 }
                 if(reaction.emoji.name === PCEmoji){
                     gamingRemove.remove(PC);
                     console.log("-\n" + user.username + " removed the PC gaming role at " + time());
-                    save += "-\n" + user.username + " removed the PC gaming role at " + time() + "\n";
-                    saveToFile(fs, save, filepath);
+                    //save += "-\n" + user.username + " removed the PC gaming role at " + time() + "\n";
+                    //saveToFile(fs, save, filepath);
                     return;
                 }
                 if(reaction.emoji.name === "adobe_flash"){
                     gamingRemove.remove(flash);
                     console.log("-\n" + user.username + " removed the flash gaming role at " + time());
-                    save += "-\n" + user.username + " removed the flash gaming role at " + time() + "\n";
-                    saveToFile(fs, save, filepath);
+                    //save += "-\n" + user.username + " removed the flash gaming role at " + time() + "\n";
+                    //saveToFile(fs, save, filepath);
                     return;
                 }
                 if(reaction.emoji.name === "xbox"){
                     gamingRemove.remove(teamxbox);
                     console.log("-\n" + user.username + " removed the xbox team role at " + time());
-                    save += "-\n" + user.username + " removed the xbox team gaming role at " + time() + "\n";
-                    saveToFile(fs, save, filepath);
+                    //save += "-\n" + user.username + " removed the xbox team gaming role at " + time() + "\n";
+                    //saveToFile(fs, save, filepath);
                     return;
                 }
                 if(reaction.emoji.name === "playstation"){
                     gamingRemove.remove(teamplaystation);
                     console.log("-\n" + user.username + " removed the playstation team role at " + time());
-                    save += "-\n" + user.username + " removed the playstation team gaming role at " + time() + "\n";
-                    saveToFile(fs, save, filepath);
+                    //save += "-\n" + user.username + " removed the playstation team gaming role at " + time() + "\n";
+                    //saveToFile(fs, save, filepath);
                     return;
                 }
                 if(reaction.emoji.name === "nintendo_64_controller"){
                     gamingRemove.remove(teamnintendo);
                     console.log("-\n" + user.username + " removed the nintendo team role at " + time());
-                    save += "-\n" + user.username + " removed the nintendo team gaming role at " + time() + "\n";
-                    saveToFile(fs, save, filepath);
+                    //save += "-\n" + user.username + " removed the nintendo team gaming role at " + time() + "\n";
+                    //saveToFile(fs, save, filepath);
                     return;
                 }
             }

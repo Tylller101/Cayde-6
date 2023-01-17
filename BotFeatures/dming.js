@@ -5,29 +5,29 @@ module.exports = {
         const greeting = msg.content.toLowerCase();
         const reply = msg.author;
         const filepath = "./BotStorage/BotLogs/DMLogs.txt";
-        var save = "";
+        //var save = "";
         console.log("-\n" + msg.author.username + " messaged me at " + time());
-        save += ("-\n" + msg.author.username + " messaged me at " + time() + "\n");
+        //save += ("-\n" + msg.author.username + " messaged me at " + time() + "\n");
            
         if(greeting === "hi" || greeting === "hello"){
             reply.send("Hello! Im Cayde-6 the Official bot of the CSE & Gaming server.");
             console.log("they said hi so i introduced myself");
-            save += "they said hi so i introduced myselft\n";
-            saveToFile(fs, save, filepath);
+            //save += "they said hi so i introduced myselft\n";
+            //saveToFile(fs, save, filepath);
             return;
         }
         if(greeting === "ping" || greeting === "ping!"){
             reply.send("Pong!");
             console.log("they pinged me so i ponged them");
-            save += "they pinged me so i ponged them\n";
-            saveToFile(fs, save, filepath);
+            //save += "they pinged me so i ponged them\n";
+            //saveToFile(fs, save, filepath);
             return;
         }
         if(greeting === "pong" || greeting === "pong!"){
             reply.send("Ping!");
             console.log("they ponged me so i pinged them");
-            save += "they ponged me so i pinged them\n";
-            saveToFile(fs, save, filepath);
+            //save += "they ponged me so i pinged them\n";
+            //saveToFile(fs, save, filepath);
             return;
         }
 
@@ -42,43 +42,43 @@ module.exports = {
                 + "I can \"Draw a card\" or \"Roll a die\"\n"
                 + "Inform users of there server stats or game stats(if applicable)");
                 console.log("asking me about the server");
-                save += "asking me about the server\n";
-                saveToFile(fs, save, filepath);
+                //save += "asking me about the server\n";
+                //saveToFile(fs, save, filepath);
                 return;
         }
         if(greeting === "pvp"){
             reply.send("PvP stands for Player Vs. Player.");
             console.log("asking me what pvp stands for");
-            save += "asking me what pvp stands for\n";
-            saveToFile(fs, save, filepath);
+            //save += "asking me what pvp stands for\n";
+            //saveToFile(fs, save, filepath);
             return;
         }
         if(greeting === "pve"){
             reply.send("PvE stands for Player Vs. Environment(aka me Cayde-6)");
             console.log("asking me what pve stands for");
-            save += "asking me what pve stands for\n";
-            saveToFile(fs, save, filepath);
+            //save += "asking me what pve stands for\n";
+            //saveToFile(fs, save, filepath);
             return;
         }
         if(greeting === "pvpve"){
             reply.send("PvPvE stands for Player Vs. Player Vs. Environment(aka me Cayde-6)");
             console.log("asking me what pvpve stands for");
-            save += "asking me what pvpve stands for\n";
-            saveToFile(fs, save, filepath);
+            //save += "asking me what pvpve stands for\n";
+            //saveToFile(fs, save, filepath);
             return;
         }
         if(greeting === "draw a card"){
             features.get("drawcard").execute(msg, guild, fs, jsonfile);
             console.log("asking me to draw a card");
-            save += "asking me to draw a card\n";
-            saveToFile(fs, save, filepath);
+            //save += "asking me to draw a card\n";
+            //saveToFile(fs, save, filepath);
             return;
         }
         if(greeting === "roll a die"){
             features.get("roledice").execute(msg, guild, fs, jsonfile);
             console.log("asking me to roll a die");
-            save += "asking me to roll a die\n";
-            saveToFile(fs, save, filepath);
+            //save += "asking me to roll a die\n";
+            //saveToFile(fs, save, filepath);
             return;
         }
         if(greeting === "games"){
@@ -108,21 +108,21 @@ module.exports = {
                 //+ ""
                 );
                 console.log("asking me about games");
-                save += "asking me about games\n";
-                saveToFile(fs, save, filepath);
+                //save += "asking me about games\n";
+                //saveToFile(fs, save, filepath);
             return;
         }
         if(greeting === "war"){
             games.get("war").execute(msg, fs, random, jsonfile);
             console.log("asking to play war");
-            save += "asking me about games\n";
-            saveToFile(fs, save, filepath);
+            //save += "asking me about games\n";
+            //saveToFile(fs, save, filepath);
             return;
         }
         if(greeting === "stats"){
             console.log("they asked to see there server stats");
-            save += "they asked to see there server stats\n";
-            saveToFile(fs, save, filepath);
+            //save += "they asked to see there server stats\n";
+            //saveToFile(fs, save, filepath);
             features.get("getstats").execute(msg, fs, guild, jsonfile);
             return;
         }
@@ -131,15 +131,15 @@ module.exports = {
                 + "If you want to play a game just type \"games\"\n" 
                 + "If you would like to view your stats for the CSE & Gaming server type \"stats\"");
                 console.log("asking me for help");
-                save += "asking me for help\n";
-                saveToFile(fs, save, filepath);
+                //save += "asking me for help\n";
+                //saveToFile(fs, save, filepath);
                 return;
         }
         else{
             msg.author.send("Sorry i do not know that command check your spelling or try using \"help\" ");
             console.log("they said \"" + greeting + "\" and i dont know what that is");
-            save += ("they said \"" + greeting + "\" and i dont know what that is\n");
-            saveToFile(fs, save, filepath);
+            //save += ("they said \"" + greeting + "\" and i dont know what that is\n");
+            //saveToFile(fs, save, filepath);
             return;
         } 
     }
