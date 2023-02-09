@@ -43,7 +43,7 @@ cayde.on("guildMemberAdd", newMember =>{ //when a person enters the server
         + `Please visit ${rulesChannel} and get familiar with the rules of the server.\n`
         + `Also make sure to visit ${tocChannel} to get familiar with all the server has to offer.\n`
         + `To get more familiar with Discord itself visit ${discordChannel} for tips, tricks and easter eggs.\n`
-        + `To gain access to class & gaming categories or channels go to ${classes} & ${gaming}.`); 
+        + `To gain access to classes & gaming categories or channels go to ${classes} & ${gaming}.`); 
     
     console.log("-\n" + newMember.user.username + " has joined the server.");
 });
@@ -94,7 +94,7 @@ cayde.on("message", msg =>{ //detects command messages
                 msg.delete();
             }
             if(BotCommand === "addgaming"){ //adds gaming embed
-                cayde.BotFeatures.get("addgaming").execute(msg, Discord, cayde);
+                cayde.BotFeatures.get("addgaming").execute(msg, fs, Discord, cayde);
                 msg.delete();
             }
             if(BotCommand === "timeout"){
@@ -104,5 +104,35 @@ cayde.on("message", msg =>{ //detects command messages
         }
     }
 });
+
+function saveToFile(save, filepath){
+    fs.open(filepath, "a", function(err){
+        if(err){
+            console.log("failed to open " + filepath);
+        }
+        else{
+            fs.appendFile(filepath, save, (err) => {
+                if(err){
+                    console.log("failed to write to " + filepath);
+                }
+                else{
+                    console.log("interaction saved to " + filepath);
+                }
+            });
+        }
+    });
+};
+
+function time(){
+    var timestamp = Date.now();
+    var dateObject = new Date(timestamp);
+    var day = dateObject.getDate();
+    var month = dateObject.getMonth() + 1;
+    var year = dateObject.getFullYear();
+    var hour = dateObject.getHours();
+    var min = dateObject.getMinutes();
+    var sec = dateObject.getSeconds();
+    return (day + "/" + month + "/" + year + "  " + hour + ":" + min + ":" + sec);
+}
 
 cayde.login(process.env.CAYDE_TOKEN); //caydes token access
