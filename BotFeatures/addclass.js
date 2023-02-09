@@ -47,6 +47,7 @@ module.exports = {
         const cse177 = msg.guild.roles.cache.find(role => role.name === "CSE177");
         const cse178 = msg.guild.roles.cache.find(role => role.name === "CSE178");
         const cse179 = msg.guild.roles.cache.find(role => role.name === "CSE179");
+        const cse180 = msg.guild.roles.cache.find(role => role.name === "CSE180");
         const cse185 = msg.guild.roles.cache.find(role => role.name === "CSE185");
 
         const engr057 = msg.guild.roles.cache.find(role => role.name === "ENGR057");
@@ -99,6 +100,7 @@ module.exports = {
         const cse177Emoji = "🔢";
         const cse178Emoji = "👮";
         const cse179Emoji = "⛓️";
+        const cse180Emoji = "💻";
         const cse185Emoji = "👁️";
 
         const engr057Emoji = "💥";
@@ -169,6 +171,7 @@ module.exports = {
             + `${cse177Emoji} for CSE177: Database System Implementation\n`
             + `${cse178Emoji} for CSE178: Computers & Networks Security\n`
             + `${cse179Emoji} for CSE179: Introduction to Parallel Computing\n`
+            + `${cse180Emoji} for CSE180: Introduction to Robotics\n`
             + `${cse185Emoji} for CSE185: Introduction to Computer Vision`);
         
         let embed3 = new Discord.MessageEmbed()
@@ -233,6 +236,7 @@ module.exports = {
         msgEmbed2.react(cse177Emoji);
         msgEmbed2.react(cse178Emoji);
         msgEmbed2.react(cse179Emoji);
+        msgEmbed2.react(cse180Emoji);
         msgEmbed2.react(cse185Emoji);
 
         let msgEmbed3 = await classes.send(embed3);
@@ -413,6 +417,10 @@ module.exports = {
                 if(reaction.emoji.name === cse179Emoji){
                     classAdd.add(cse179);
                     console.log("-\n" + user.username + " added cse179");
+                }
+                if(reaction.emoji.name === cse180Emoji){
+                    classAdd.add(cse180);
+                    console.log("-\n" + user.username + " added cse180");
                 }
                 if(reaction.emoji.name === cse185Emoji){
                     classAdd.add(cse185);
@@ -618,6 +626,10 @@ module.exports = {
                 if(reaction.emoji.name === cse179Emoji){
                     classRemove.remove(cse179);
                     console.log("-\n" + user.username + " removed cse179");
+                }
+                if(reaction.emoji.name === cse180Emoji){
+                    classRemove.remove(cse180);
+                    console.log("-\n" + user.username + " removed cse180");
                 }
                 if(reaction.emoji.name === cse185Emoji){
                     classRemove.remove(cse185);
