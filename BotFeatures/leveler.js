@@ -14,7 +14,7 @@ module.exports = {
         }
 
         if(msg.guild.id in stats === false){
-        stats[msg.guild.id] = {};
+            stats[msg.guild.id] = {};
         }
         const guildstats = stats[msg.guild.id];
 

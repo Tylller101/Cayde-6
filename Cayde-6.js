@@ -63,6 +63,9 @@ cayde.on("message", msg =>{ //detects command messages
         return;
     }
     if(msg.content.startsWith(":") && msg.content.endsWith(":")){
+        if(msg.content == ":"){
+            return;
+        }
         const args = msg.content.slice(1, -1);
 
         cayde.BotFeatures.get("uselockedemojis").execute(msg, args);
@@ -78,6 +81,7 @@ cayde.on("message", msg =>{ //detects command messages
         if(!findpeon && !findapprentice && !findjourneyman && !findmaster && !findgrandmaster){
             msg.member.roles.add(peon);
         }
+        //cayde.BotFeatures.get("muteSpam").execute(msg, fs, jsonfile);
         cayde.BotFeatures.get("leveler").execute(msg, fs, random, jsonfile);
         return;
     }
