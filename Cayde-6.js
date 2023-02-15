@@ -81,7 +81,7 @@ cayde.on("message", msg =>{ //detects command messages
         if(!findpeon && !findapprentice && !findjourneyman && !findmaster && !findgrandmaster){
             msg.member.roles.add(peon);
         }
-        //cayde.BotFeatures.get("muteSpam").execute(msg, fs, jsonfile);
+        cayde.BotFeatures.get("muteSpam").execute(msg, fs, jsonfile);
         cayde.BotFeatures.get("leveler").execute(msg, fs, random, jsonfile);
         return;
     }

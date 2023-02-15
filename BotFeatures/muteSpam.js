@@ -2,6 +2,7 @@ module.exports = {
     name: "muteSpam", 
     description: "mutes spam", 
     execute(msg, fs, jsonfile){
+        var owner = "356928159113019402";
         var watchfile = {};
         if(fs.existsSync("./BotStorage/Server/msgwatch.json")){
             watchfile = jsonfile.readFileSync("./BotStorage/Server/msgwatch.json");
@@ -27,6 +28,7 @@ module.exports = {
                 strike3: false,
                 strike3id: "null",
                 chan3id: "null",
+                sent: false,
             };
         }   
 
@@ -52,13 +54,17 @@ module.exports = {
                     
                 }
                 if(usermsgtime.strike3 === true){ 
-                    msg.member.kick();
-                    msg.author.send("you have been **kicked** from the **CSE & Gaming server** for **24hr** "
-                    + "for spam if you were hacked you should change your password and enact duel authentication "
-                    + "if you need assistance or believe this was done in error please contact **@Tyller101#7136**,  "
-                    + "**@Icywind56#5656**, **@kirpy#5766**, **@Luna-bun#4262**, **@Mad#4042**, **@Ty'Quandre Jackson#4778**, "
-                    + "**@Gipsy#4094**, or **@BlackMakret#6680**");
-
+                    msg.client.users.fetch(owner).then(owneralert => {
+                        owneralert.send("user " + msg.author.username + " was kicked for spamming a link");
+                    });
+                    if(usermsgtime.sent === false){
+                        msg.author.send("you have been **kicked** from the **CSE & Gaming server** for **24hr** "
+                        + "for spam if you were hacked you should change your password and enact duel authentication "
+                        + "if you need assistance or believe this was done in error please contact **@Tyller101#7136**,  "
+                        + "**@Icywind56#5656**, **@kirpy#5766**, **@Luna-bun#4262**, **@Mad#4042**, **@Ty'Quandre Jackson#4778**, "
+                        + "**@Gipsy#4094**, or **@BlackMakret#6680**");
+                        usermsgtime.sent = true;
+                    }
                     msg.client.channels.fetch(usermsgtime.chan1id).then(channel => {
                         channel.messages.delete(usermsgtime.strike1id);
                     });
@@ -68,6 +74,7 @@ module.exports = {
                     msg.client.channels.fetch(usermsgtime.chan3id).then(channel => {
                         channel.messages.delete(usermsgtime.strike3id);
                     });
+
                 }
                 if(usermsgtime.strike1 === false){
                     usermsgtime.strike1id = msg.id;
@@ -87,11 +94,12 @@ module.exports = {
                 usermsgtime.strike1 = false;
                 usermsgtime.strike2 = false;
                 usermsgtime.strike3 = false;
-                //console.log("user did not post a link")
+                usermsgtime.sent = false;
             }
 
         }
         else{
+            usermsgtime.last_msg = Date.now()
             usermsgtime.content = "null";
             usermsgtime.strike1id = "null";
             usermsgtime.strike2id = "null";
@@ -99,10 +107,17 @@ module.exports = {
             usermsgtime.chan1id = "null";
             usermsgtime.chan2id = "null";
             usermsgtime.chan3id = "null";
-            usermsgtime.last_msg = Date.now()
             usermsgtime.strike1 = false;
             usermsgtime.strike2 = false;
             usermsgtime.strike3 = false; 
+            usermsgtime.sent = false;
+        }
+        if(usermsgtime.sent === true){
+            msg.member.kick();
+            usermsgtime.strike1 = false;
+            usermsgtime.strike2 = false;
+            usermsgtime.strike3 = false;
+            usermsgtime.sent = false;
         }
         jsonfile.writeFileSync("./Botstorage/Server/msgwatch.json", watchfile);    
     }
